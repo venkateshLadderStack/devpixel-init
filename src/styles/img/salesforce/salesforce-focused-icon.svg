@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="61.154" height="59.511" viewBox="0 0 61.154 59.511">
+  <g id="Group_2169" data-name="Group 2169" transform="translate(1.713 3.111)">
+    <rect id="Rectangle_713" data-name="Rectangle 713" width="31" height="42" rx="3" transform="translate(19.106 5.316)" fill="#f6bb30"/>
+    <path id="Icon_simple-salesforce" data-name="Icon simple-salesforce" d="M15.851,8.277h0l.226-.2a7.584,7.584,0,0,1,4.6-1.869A6.778,6.778,0,0,1,26.521,9.7a7.742,7.742,0,0,1,3.329-.713,8.27,8.27,0,0,1-.027,16.54,9.1,9.1,0,0,1-1.616-.165,5.942,5.942,0,0,1-5.228,3.089,6.3,6.3,0,0,1-2.614-.594A6.845,6.845,0,0,1,7.651,27.55a5.853,5.853,0,0,1-1.307.119A6.376,6.376,0,0,1,0,21.252a6.443,6.443,0,0,1,3.184-5.561,7.167,7.167,0,0,1-.618-2.925A7.372,7.372,0,0,1,9.932,5.4a10.391,10.391,0,0,1,6.921,3.587" transform="translate(9.925 7.651)" fill="none" stroke="#000" stroke-width="2"/>
+    <path id="Path_9381" data-name="Path 9381" d="M4.287,22.081V7.625s.152-3.736,4.861-3.736H22.932" transform="translate(-5 -6)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_9382" data-name="Path 9382" d="M22.932,22.081V7.625s-.152-3.736-4.861-3.736H4.287" transform="translate(35.51 -6)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_9383" data-name="Path 9383" d="M22.932,3.889V18.345s-.152,3.736-4.861,3.736H4.287" transform="translate(35.51 33.318)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_9384" data-name="Path 9384" d="M4.287,3.889V18.345s.152,3.736,4.861,3.736H22.932" transform="translate(-5 33.318)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+  </g>
+</svg>

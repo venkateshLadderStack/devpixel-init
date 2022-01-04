@@ -1,0 +1,16 @@
+<svg id="BLT_Logo_White" xmlns="http://www.w3.org/2000/svg" width="93.915" height="33.647" viewBox="0 0 93.915 33.647">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fbaa19;
+      }
+    </style>
+  </defs>
+  <g id="Front" transform="translate(0 0)">
+    <g id="Layer_23_copy">
+      <path id="Path_9468" data-name="Path 9468" class="cls-1" d="M63.642,0H26.8V6.815H39.152V33.647H51.077V6.815H63.642Z" transform="translate(30.273 0)"/>
+      <path id="Path_9469" data-name="Path 9469" class="cls-1" d="M48.04,27.046H29.726V0H17.8V33.647H48.04Z" transform="translate(20.107 0)"/>
+      <path id="Path_9470" data-name="Path 9470" class="cls-1" d="M36.629,23.212a9.578,9.578,0,0,0-4.685-8.092A7.188,7.188,0,0,0,33.86,9.8C34.073,4.472,28.536,0,21.509,0H0V33.647H24.49C31.3,33.435,36.629,28.962,36.629,23.212ZM19.592,12.778H10.861V6.815h8.944c2.343,0,4.046,1.278,4.046,2.981a3.549,3.549,0,0,1-4.259,2.981Zm-8.731,6.815H21.3a4.138,4.138,0,0,1,4.685,3.62h0a4,4,0,0,1-4.685,3.62H10.861Z" transform="translate(0 0)"/>
+    </g>
+  </g>
+</svg>

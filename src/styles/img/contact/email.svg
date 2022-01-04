@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="76" height="76" viewBox="0 0 76 76">
+  <defs>
+    <clipPath id="clip-Custom_Size_1">
+      <rect width="76" height="76"/>
+    </clipPath>
+  </defs>
+  <g id="Custom_Size_1" data-name="Custom Size – 1" clip-path="url(#clip-Custom_Size_1)">
+    <g id="email" transform="translate(-352.098 -856.684)">
+      <g id="Group_521" data-name="Group 521" transform="translate(357.098 858.684)">
+        <g id="Group_520" data-name="Group 520" transform="translate(0 0)">
+          <path id="Path_1998" data-name="Path 1998" d="M433.488,446.29a7.7,7.7,0,0,0,7.679-7.678V404.523c0-5.018-2.01-7.3-4.836-9.472l-28.138-21.077-28.139,21.077c-2.825,2.173-4.834,4.455-4.834,9.472v34.089a7.7,7.7,0,0,0,7.678,7.678Z" transform="translate(-375.219 -373.974)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3"/>
+          <path id="Path_2000" data-name="Path 2000" d="M398.463,418.882l1.392-1.292a9.075,9.075,0,0,1,12.248.032l1.343,1.259h.969l15.266-14.769V376.5h-47.37v27.555l15.322,14.823Z" transform="translate(-373.022 -370.915)" fill="#f6bb30"/>
+          <path id="Path_1999" data-name="Path 1999" d="M437.281,433.562,413.62,410.18a8.737,8.737,0,0,0-12.248-.034l-23.955,23.416" transform="translate(-374.538 -363.539)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3"/>
+          <line id="Line_40" data-name="Line 40" x2="23.474" y2="23.93" transform="translate(1.543 24.452)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3"/>
+          <line id="Line_41" data-name="Line 41" x1="23.474" y2="23.93" transform="translate(40.987 24.452)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3"/>
+        </g>
+        <line id="Line_42" data-name="Line 42" x2="23.576" transform="translate(21.611 30.78)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3"/>
+        <line id="Line_43" data-name="Line 43" x2="23.576" transform="translate(21.611 20.302)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3"/>
+        <line id="Line_44" data-name="Line 44" x2="11.788" transform="translate(26.85 62.215)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3"/>
+      </g>
+    </g>
+  </g>
+</svg>

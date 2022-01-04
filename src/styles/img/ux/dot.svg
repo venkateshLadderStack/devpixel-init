@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="10" viewBox="0 0 10 10">
+  <defs>
+    <clipPath id="clip-Custom_Size_1">
+      <rect width="10" height="10"/>
+    </clipPath>
+  </defs>
+  <g id="Custom_Size_1" data-name="Custom Size – 1" clip-path="url(#clip-Custom_Size_1)">
+    <circle id="Ellipse_77" data-name="Ellipse 77" cx="5" cy="5" r="5" fill="#b4ad9f"/>
+  </g>
+</svg>
