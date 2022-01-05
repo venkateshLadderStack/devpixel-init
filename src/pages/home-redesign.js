@@ -22,144 +22,21 @@ import Clients from "../components/Home/Clients"
 import FooterFormContact from "../components/FooterContactForm"
 import BackToTopItem from "../components/BackTopTop"
 import Footerform from "../components/Home/FooterForm"
+import Hero from "../components/Home/Hero"
+import Communication from "../components/Home/Communication"
+import Brand from "../components/Home/Brand"
 
-const HomeRedesign = () => {
+const HomeRedesign = ({ data }) => {
+  const acf = data?.wordpressPage?.acf
+  console.log(data?.wordpressPage?.acf, "DATA")
   return (
     <>
       <Navbar />
+      <Hero hero={acf?.hero} />
+      <Brand acf={acf} />
+      <Communication communication={acf?.communication} />
 
-      <div className="hero__area" style={{ backgroundImage: `url(${HeroBG})` }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="hero__wrap">
-                <div className="hero__content">
-                  <a href="#">We are</a>
-                  <h4> Salesforce Pathfinders</h4>
-                  <p>
-                    We can guide you through the Salesforce eco-system to reach
-                    your goals safely,timely and visually
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="hero__area hero__mobile"
-        style={{ backgroundImage: `url(${MHeroBG})` }}
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="hero__wrap">
-                <div className="hero__content">
-                  <a href="#">We are</a>
-                  <h4> Salesforce Pathfinders</h4>
-                  <p>
-                    We can guide you through the Salesforce eco-system to reach
-                    your goals safely,timely and visually
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="brand__aera">
-        <img src={Bgbottom} alt="" className="hero-bg-b" />
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="brand__wrap">
-                <div className="brand__title">
-                  <h4>Many have already entrusted us and succeeded with us</h4>
-                </div>
-                <Clients />
-
-                <div className="safe__hand">
-                  <div className="safe__hand__title">
-                    <h4>
-                      You are in <span>safe hands</span>
-                    </h4>
-                  </div>
-
-                  <Testimonials />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        className="above__area"
-        style={{ backgroundImage: `url(${AboveBG})` }}
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="above__wrap">
-                <div className="above__content">
-                  <h4>
-                    So, what elevates us above the rest?
-                    <span>Communication</span>
-                  </h4>
-                  <p>
-                    Communication is the foundation to a successful
-                    collaboration and the underpinning of all projects destined
-                    to succeed. There is no “Option B”. This is why we have made
-                    communication with YOU central to our vision and the core of
-                    everything DevPixel. <br />
-                    <br />
-                    <span>
-                      Let us show you visually of what you can expect from us at
-                      each stage of crafting an extraordinary Salesforce
-                      experience for your customers.
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="above__area avobe--aera--res">
-        <div className="above--res--bg">
-          <img src={MAboveBG} alt="" />
-        </div>
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="above__wrap">
-                <div className="above__content">
-                  <h4>
-                    So, what elevates us above the rest?
-                    <span>Communication</span>
-                  </h4>
-                  <p>
-                    Communication is the foundation to a successful
-                    collaboration and the underpinning of all projects destined
-                    to succeed. There is no “Option B”. This is why we have made
-                    communication with YOU central to our vision and the core of
-                    everything DevPixel. <br />
-                    <br />
-                    <span>
-                      Let us show you visually of what you can expect from us at
-                      each stage of crafting an extraordinary Salesforce
-                      experience for your customers.
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="business--area">
+      <div className="business--area p-20">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -167,32 +44,20 @@ const HomeRedesign = () => {
                 <div className="business__fx">
                   <div className="business__lf">
                     <div className="business--img">
-                      <img src={Bussiness} alt="" />
+                      <img
+                        src={acf?.stage_1?.main_image?.localFile?.publicURL}
+                        alt=""
+                      />
                     </div>
                   </div>
                   <div className="business__ri">
                     <div className="business__ct">
-                      <h4>
-                        <span>Stage 1:</span> Understanding your business
-                      </h4>
-                      <p>
-                        What are you envisioning? What are your business
-                        objectives? What do your customers want to see?
-                      </p>
-                      <p>
-                        We start by developing a comprehensive understanding of
-                        your business. This gives us the context within which we
-                        will later identify the safest and most efficient path
-                        forward for you.
-                      </p>
-                      <p>
-                        At the same time, we will also calibrate our
-                        communications to match specifically you. Presentation,
-                        availability, escalation, and anything and everything
-                        else that’s needed to elevate the standard “IT project
-                        communication” to one that you will feel comfortable
-                        with and customly YOURS.
-                      </p>
+                      <h4>{acf?.stage_1?.heading}</h4>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: acf?.stage_1?.description,
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -207,13 +72,22 @@ const HomeRedesign = () => {
                 </div>
                 <div className="sample__fx">
                   <div className="sample__single--box">
-                    <img src={Sample} alt="" />
+                    <img
+                      src={acf?.stage_1?.stage_1_sample_1?.localFile?.publicURL}
+                      alt=""
+                    />
                   </div>
                   <div className="sample__single--box">
-                    <img src={Sample2} alt="" />
+                    <img
+                      src={acf?.stage_1?.stage_1_sample_2?.localFile?.publicURL}
+                      alt=""
+                    />
                   </div>
                   <div className="sample__single--box">
-                    <img src={Sample3} alt="" />
+                    <img
+                      src={acf?.stage_1?.stage_1_sample_3?.localFile?.publicURL}
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>
@@ -225,36 +99,32 @@ const HomeRedesign = () => {
                 <div className="business__fx">
                   <div className="business__lf learning--img-res">
                     <div className="business--img">
-                      <img src={Bussiness} alt="" />
+                      <img
+                        src={
+                          acf?.stage_2?.stage_2_main_image?.localFile?.publicURL
+                        }
+                        alt=""
+                      />
                     </div>
                   </div>
                   <div className="business__ri">
                     <div className="business__ct">
-                      <h4>
-                        <span>Stage 2: Learning your</span> aesthetics
-                      </h4>
-                      <p>
-                        Modern or traditional? Detailed at-a-glance or guided
-                        with bite-sized information?{" "}
-                      </p>
-                      <p>
-                        We want to get you involved right from the start and
-                        learn what kind of visuals would satisfy your
-                        preferences. Through fast-turnaround layout and flow
-                        designs, we will drive your project swiftly from a raw
-                        “cutout” to a refined solution, with your guidance and
-                        approval.{" "}
-                      </p>
-                      <p>
-                        We believe business should always come first. Show us
-                        what you want to see, and we will line up the right
-                        technologies that will deliver YOUR vision.
-                      </p>
+                      <h4>{acf?.stage_2?.heading}</h4>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: acf?.stage_2?.description,
+                        }}
+                      />
                     </div>
                   </div>
                   <div className="business__lf learning--img">
                     <div className="business--img">
-                      <img src={Bussiness} alt="" />
+                      <img
+                        src={
+                          acf?.stage_2?.stage_2_main_image?.localFile?.publicURL
+                        }
+                        alt=""
+                      />
                     </div>
                   </div>
                 </div>
@@ -264,7 +134,7 @@ const HomeRedesign = () => {
         </div>
       </div>
 
-      <div className="delevar__area">
+      <div className="delevar__area p-20">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -274,17 +144,29 @@ const HomeRedesign = () => {
                 </div>
                 <div className="delevar__image--wrap">
                   <div className="delevar__single--img">
-                    <img src={D1} alt="" />
+                    <img
+                      src={acf?.stage_2?.stage_2_sample_1?.localFile?.publicURL}
+                      alt=""
+                    />
                   </div>
                   <div className="delevar__single--img delevari--mid">
-                    <img src={D2} alt="" />
+                    <img
+                      src={acf?.stage_2?.stage_2_sample_2?.localFile?.publicURL}
+                      alt=""
+                    />
                   </div>
                   <div className="delevar__single--img delevari--lft">
-                    <img src={D3} alt="" />
+                    <img
+                      src={acf?.stage_2?.stage_2_sample_3?.localFile?.publicURL}
+                      alt=""
+                    />
                   </div>
                 </div>
                 <div className="delevary__mobil">
-                  <img src={Mb} alt="" />
+                  <img
+                    src={acf?.stage_2?.stage_2_mobile?.localFile?.publicURL}
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -295,39 +177,22 @@ const HomeRedesign = () => {
                 <div className="business__fx">
                   <div className="business__lf">
                     <div className="business--img">
-                      <img src={Control} alt="" />
+                      <img
+                        src={
+                          acf?.stage_3?.stage_3_main_image?.localFile?.publicURL
+                        }
+                        alt=""
+                      />
                     </div>
                   </div>
                   <div className="business__ri">
                     <div className="business__ct">
-                      <h4>Stage 3: Keeping you in control</h4>
-                      <p>
-                        How is the project going? Any foreseeable challenges
-                        around the corner? Are we on time and on budget?{" "}
-                      </p>
-                      <p>
-                        We safeguard all our plans with layers of redundancy
-                        that protect your project from behind the scenes and are
-                        completely transparent to your budget. Periodically, we
-                        will also give you a health overview of the project and
-                        a summary of any challenges that have been mitigated,
-                        both of which can be directly incorporated into your own
-                        reports for further reporting.{" "}
-                      </p>
-                      <p>
-                        When the unforeseeable turns into the inevitable,
-                        however, we will immediately bring you into the know,
-                        keep you continuously up-to-date, and work tirelessly
-                        around the clock to ensure that you will never receive
-                        an unpleasant surprise from our end. We strive to always
-                        afford you with ample lead time to prepare your team and
-                        your stakeholders against any challenges that may be
-                        coming.{" "}
-                      </p>
-                      <p>
-                        During the entire COVID-19 pandemic to date, we have not
-                        even once failed to deliver on our promises.
-                      </p>
+                      <h4>{acf?.stage_3?.heading}</h4>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: acf?.stage_3?.description,
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -340,23 +205,186 @@ const HomeRedesign = () => {
         </div>
       </div>
 
-      <div className="foooter__area">
-        <div className="footer__res">
-          <img src={Res} alt="" />
+      <div class="foooter__area">
+        <div>
+          <img
+            className="footer_img_bg"
+            src={acf?.footer_hero?.background_image?.localFile?.publicURL}
+            alt=""
+          />
         </div>
-        <div className="footer--top-ct">
-          <h5>
-            You can count on us. <br />
-            You can count on DevPixel.
-          </h5>
-        </div>
-        <div className="footer__bg">
-          <img src={FooterSV} alt="" />
-        </div>
+        <div
+          className="footer--top-ct"
+          dangerouslySetInnerHTML={{ __html: acf?.footer_hero?.heading }}
+        />
+        {/* <div class="footer__bg">
+          <img
+            src={acf?.footer_hero?.background_image?.localFile?.publicURL}
+            alt=""
+          />
+        </div> */}
+        <Footerform />
       </div>
-      <Footerform />
     </>
   )
 }
 
 export default HomeRedesign
+
+export const HomeNewQuery = graphql`
+  query HomeNewQuery {
+    wordpressPage(slug: { eq: "home-new" }) {
+      title
+      slug
+      acf {
+        hero {
+          sub_heading
+          heading
+          description
+          background_image_main {
+            source_url
+            localFile {
+              publicURL
+            }
+          }
+          background_image_2 {
+            source_url
+            localFile {
+              publicURL
+            }
+          }
+          mobile_background_image {
+            source_url
+            localFile {
+              publicURL
+            }
+          }
+        }
+        clients {
+          heading
+          clients {
+            client_image {
+              source_url
+              localFile {
+                publicURL
+              }
+            }
+            redirect_url
+          }
+        }
+        communication {
+          sub_heading
+          heading
+          description_1
+          description_2
+          background_image {
+            source_url
+            localFile {
+              publicURL
+            }
+          }
+          background_image_mobile {
+            source_url
+            localFile {
+              publicURL
+            }
+          }
+        }
+        footer_hero {
+          heading
+          background_image {
+            source_url
+            localFile {
+              publicURL
+            }
+          }
+        }
+        testimonials {
+          sub_heading
+          heading
+          testimonial {
+            quote
+            author_detail
+            image {
+              source_url
+              localFile {
+                publicURL
+              }
+            }
+          }
+        }
+        stage_1 {
+          heading
+          description
+          main_image {
+            source_url
+            localFile {
+              publicURL
+            }
+          }
+          stage_1_sample_1 {
+            source_url
+            localFile {
+              publicURL
+            }
+          }
+          stage_1_sample_2 {
+            source_url
+            localFile {
+              publicURL
+            }
+          }
+          stage_1_sample_3 {
+            source_url
+            localFile {
+              publicURL
+            }
+          }
+        }
+        stage_2 {
+          heading
+          description
+          stage_2_main_image {
+            source_url
+            localFile {
+              publicURL
+            }
+          }
+          stage_2_sample_1 {
+            source_url
+            localFile {
+              publicURL
+            }
+          }
+          stage_2_sample_2 {
+            source_url
+            localFile {
+              publicURL
+            }
+          }
+          stage_2_sample_3 {
+            source_url
+            localFile {
+              publicURL
+            }
+          }
+          stage_2_mobile {
+            localFile {
+              publicURL
+            }
+          }
+        }
+        stage_3 {
+          heading
+          description
+          stage_3_main_image {
+            source_url
+            localFile {
+              publicURL
+            }
+          }
+        }
+      }
+    }
+  }
+`

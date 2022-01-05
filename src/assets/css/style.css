@@ -80,8 +80,8 @@ ul {
 /*header--aera--style--start*/
 
 .hero__area {
-  height: 106vh;
-  background-size: 100% 100%;
+  height: 100vh;
+  background-size: cover;
   background-position: center;
   padding-top: 215px;
   position: fixed;
@@ -90,6 +90,7 @@ ul {
   left: 0;
   right: 0;
   margin: auto;
+  font-family: "Poppins", sans-serif;
 }
 .header__area {
   position: absolute;
@@ -97,6 +98,7 @@ ul {
   left: 0;
   right: 0;
   z-index: 9999;
+  font-family: "Poppins", sans-serif;
 }
 .header__menu ul li {
   display: inline-block;
@@ -208,6 +210,7 @@ a {
   background: #153243;
   position: relative;
   margin-top: 1050px;
+  font-family: "Poppins", sans-serif;
 }
 .hero-bg-b {
   position: absolute;
@@ -313,7 +316,6 @@ a {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
 }
 
 .owl-nav button {
@@ -338,17 +340,18 @@ a {
 }
 
 .above__area {
-  height: 650px;
+  height: 720px;
   padding-top: 70px;
   background-size: cover;
   background-position: center;
   position: relative;
 }
 .above__content {
-  max-width: 713px;
+  max-width: 700px;
+  font-family: "Poppins", sans-serif;
 }
 .above__content h4 {
-  font-size: 38px;
+  font-size: 34px;
   color: #000000;
   line-height: 45px;
   margin-bottom: 10px;
@@ -365,7 +368,7 @@ a {
   left: 0;
 }
 .above__content p {
-  font-size: 20px;
+  font-size: 16px;
   color: #000000;
   line-height: 28px;
 }
@@ -374,7 +377,9 @@ a {
 }
 .above__content h4 span {
   font-weight: 700;
+  font-weight: bold;
 }
+
 /*avobe-area--end*/
 
 /*business--area--style--start*/
@@ -382,6 +387,7 @@ a {
 .business--area {
   background: #1e3f53;
   position: relative;
+  font-family: "Poppins", sans-serif;
 }
 .business__lf {
   width: 41%;
@@ -405,11 +411,13 @@ a {
   line-height: 35px;
   margin-bottom: 5px;
 }
-.business__ct p {
-  font-size: 20px;
+.business__ct div p {
+  font-size: 16px;
   color: #dce3e6;
   line-height: 26px;
   margin-bottom: 20px;
+  font-weight: 300;
+  opacity: 0.7;
 }
 .business__wrap {
   padding-bottom: 25px;
@@ -434,6 +442,7 @@ a {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding-top: 20px;
 }
 .sample__wrap {
   padding-bottom: 54px;
@@ -450,6 +459,7 @@ a {
   background: #1e3f53;
   padding-top: 100px;
   position: relative;
+  font-family: "Poppins", sans-serif;
 }
 .delevar__single--img {
   width: 654px;
@@ -500,13 +510,14 @@ a {
 }
 .delevar__area {
   padding-bottom: 60px;
+  font-family: "Poppins", sans-serif;
 }
 /*delevar--area--style--end*/
 
 /*footer--area--style--start*/
 
 .foooter__area {
-  height: 1120px;
+  height: unset;
   width: 100%;
   position: relative;
   position: relative;
@@ -524,13 +535,14 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #131f27;
+  background: #1e3f53;
 }
 .footer__bg img {
   width: 100%;
-  height: 100%;
+  height: unset;
+  object-fit: cover;
 }
-.footer__box h3 {
+.footer__box h4 {
   font-size: 32px;
   color: #ffffff;
   font-weight: 700;
@@ -538,10 +550,11 @@ a {
   margin-bottom: 12px;
 }
 .footer__box p {
-  font-size: 20px;
+  font-size: 16px;
   color: #ffffff;
   margin: 0;
   margin-bottom: 14px;
+  opacity: 0.7;
 }
 
 .footer__box p a {
@@ -603,7 +616,10 @@ focus {
   border-color: #bc9818;
   color: #fff;
 }
-.footer--top-ct h5 {
+.footer--top-ct {
+  font-family: "Poppins" sans-serif;
+}
+.footer--top-ct h4 {
   margin: 0;
   font-size: 36px;
   color: #e2b313;
@@ -612,11 +628,13 @@ focus {
   top: 59px;
   left: 20%;
   z-index: 99999;
+  font-family: "Poppins" sans-serif;
 }
 /*footer--area--style--end*/
 
 .footer---top-tx {
   display: none;
+  font-family: "Poppins", sans-serif;
 }
 .footer__res {
   margin-top: -128px;
@@ -658,9 +676,10 @@ focus {
 }
 .offcanva__menu {
   margin-top: 36px;
+  font-family: "Poppins" sans-serif;
 }
 .offcanva__menu ul li a {
-  font-size: 14px;
+  font-size: 18px;
   color: #fff;
   font-weight: 500;
   padding: 10px 20px;
@@ -668,6 +687,7 @@ focus {
   /*! border-bottom: 1px solid #ddd; */
   transition: 0.3s;
   padding-left: 40px;
+  font-family: "Poppins" sans-serif;
 }
 .offcanva__menu ul li a:hover {
   padding-left: 40px;
@@ -704,4 +724,32 @@ focus {
 }
 .cross.active {
   display: block;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer_wrapper {
+    padding: 0 30px;
+  }
+  .above__content {
+    width: 80vw;
+    margin: 0 auto;
+  }
+}
+
+.bg-yellow {
+  color: yellow;
+}
+
+.label_text {
+  opacity: 0.7;
+}
+
+.footer_img_bg {
+  background: #1e3f53;
+  width: 100vw;
+  object-fit: cover;
 }

@@ -10,7 +10,8 @@
   }
 
   .hero__area {
-    height: 100vh;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
   }
   .above__area {
     height: 1000px;
@@ -22,6 +23,7 @@
 
   .business--area {
     padding-top: 100px;
+    font-family: "Poppins", sans-serif;
   }
   .foooter__area {
     height: 4000px;
@@ -52,14 +54,14 @@
 /* XL Device :1200px. */
 @media (min-width: 2047px) and (max-width: 3839px) {
   .hero__area {
-    height: 50vh;
+    height: 100%;
   }
 }
 
 /* XL Device :1200px. */
 @media (min-width: 1200px) and (max-width: 1449px) {
   .hero__area {
-    height: 788px;
+    height: 100%;
     padding-top: 150px;
   }
 
@@ -68,7 +70,7 @@
   }
 
   .foooter__area {
-    height: 740px;
+    height: unset;
     width: 100%;
     position: relative;
   }
@@ -80,7 +82,7 @@
     left: 29%;
   }
 
-  .footer__box h3 {
+  .footer__box h4 {
     font-size: 26px;
     line-height: 30px;
     margin-bottom: 7px;
@@ -95,12 +97,13 @@
     width: 45%;
   }
 
-  .footer--top-ct h5 {
+  .footer--top-ct h4 {
     margin: 0;
     font-size: 36px;
     top: 29px;
     left: 9%;
     z-index: 99999;
+    font-family: "Poppins" sans-serif;
   }
 
   .brand__aera {
@@ -135,13 +138,13 @@
 /* XL Device :1200px. */
 @media (min-width: 2047px) and (max-width: 3839px) {
   .hero__area {
-    height: 100vh;
+    height: 100%;
   }
 }
 /* LG Device :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
   .hero__area {
-    height: 611px;
+    height: 100%;
     padding-top: 150px;
   }
 
@@ -170,7 +173,7 @@
     left: 179px;
   }
 
-  .footer__box h3 {
+  .footer__box h4 {
     font-size: 26px;
     line-height: 30px;
     margin-bottom: 7px;
@@ -185,12 +188,13 @@
     width: 45%;
   }
 
-  .footer--top-ct h5 {
+  .footer--top-ct h4 {
     margin: 0;
     font-size: 30px;
     top: 14px;
     left: 6%;
     z-index: 99999;
+    font-family: "Poppins" sans-serif;
   }
 
   .header__btn a {
@@ -230,15 +234,15 @@
   }
 
   .above__content h4 {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 26px;
+    line-height: 36px;
     margin-bottom: 7px;
     padding-bottom: 5px;
   }
 
   .above__content p {
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 24px;
   }
 
   .business__ct h4 {
@@ -247,8 +251,8 @@
     margin-bottom: 5px;
   }
 
-  .business__ct p {
-    font-size: 16px;
+  .business__ct div p {
+    font-size: 14px;
     line-height: 20px;
     margin-bottom: 12px;
   }
@@ -318,8 +322,7 @@
     height: auto;
     width: 100%;
     position: relative;
-    background: #131f27;
-    padding: 50px 0;
+    /* padding: 50px 0; */
   }
 
   .footer__widget {
@@ -329,7 +332,7 @@
     left: 179px;
   }
 
-  .footer__box h3 {
+  .footer__box h4 {
     font-size: 26px;
     line-height: 30px;
     margin-bottom: 7px;
@@ -344,7 +347,7 @@
     width: 45%;
   }
 
-  .footer--top-ct h5 {
+  .footer--top-ct h4 {
     margin: 0;
     font-size: 30px;
     top: 39px;
@@ -353,6 +356,7 @@
     position: unset;
     padding-left: 15px;
     display: none;
+    font-family: "Poppins" sans-serif;
   }
 
   .header__btn a {
@@ -398,6 +402,7 @@
     line-height: 40px;
     margin-bottom: 7px;
     padding-bottom: 5px;
+    font-weight: bold;
   }
 
   .above__content p {
@@ -411,8 +416,8 @@
     margin-bottom: 5px;
   }
 
-  .business__ct p {
-    font-size: 16px;
+  .business__ct div p {
+    font-size: 14px;
     line-height: 20px;
     margin-bottom: 12px;
   }
@@ -474,25 +479,24 @@
   }
 
   .hero__content a {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 21px;
   }
 
   .hero__content h4 {
-    font-size: 30px;
+    font-size: 26px;
     padding-bottom: 2px;
   }
 
   .hero__content p {
-    font-size: 15px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .safe__hand__fx {
     display: block;
     width: 100%;
     text-align: center;
-    height: 100%;
   }
 
   .safe__hgand--img {
@@ -541,6 +545,7 @@
   .delevar__area {
     padding-bottom: 138px;
     padding-top: 50px;
+    font-family: "Poppins", sans-serif;
   }
 
   .footer__bg {
@@ -567,6 +572,7 @@
     margin-top: 20px;
     z-index: 9999;
     position: relative;
+    font-family: "Poppins", sans-serif;
   }
 
   .footer---top-tx h4 {
@@ -574,6 +580,7 @@
     color: #e2b313;
     font-weight: 700;
     margin: 0;
+    font-family: "Poppins", sans-serif;
   }
 
   .header__ri {
@@ -611,21 +618,23 @@
     height: auto;
     width: 100%;
     position: relative;
-    background: #131f27;
+    background-color: #1e3f53;
     padding: 50px 0;
   }
 
   .footer__widget {
     position: unset;
     bottom: 0;
-    width: 100%;
+    width: 75%;
     left: 179px;
+    margin: 0 auto;
+    padding-bottom: 30px;
   }
 
-  .footer__box h3 {
+  .footer__box h4 {
     font-size: 20px;
-    line-height: 23px;
-    margin-bottom: 7px;
+    line-height: 30px;
+    margin-bottom: 10px;
   }
 
   .footer__single__form.form__wd.wd-def {
@@ -638,7 +647,7 @@
     display: block;
   }
 
-  .footer--top-ct h5 {
+  .footer--top-ct h4 {
     margin: 0;
     font-size: 30px;
     top: 39px;
@@ -647,6 +656,7 @@
     position: unset;
     padding-left: 15px;
     display: none;
+    font-family: "Poppins" sans-serif;
   }
 
   .header__btn a {
@@ -669,8 +679,9 @@
   }
 
   .hero__content {
-    max-width: 100%;
-    margin-left: 0;
+    max-width: 85%;
+    margin: 0 auto;
+    margin-top: 5vh;
   }
 
   .brand__wrap {
@@ -705,8 +716,8 @@
     margin-bottom: 15px;
   }
 
-  .business__ct p {
-    font-size: 16px;
+  .business__ct div p {
+    font-size: 14px;
     line-height: 20px;
     margin-bottom: 12px;
   }
@@ -779,15 +790,16 @@
   }
 
   .hero__content p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 24px;
+    font-weight: 400;
+    text-justify: space-evenly;
   }
 
   .safe__hand__fx {
     display: block;
     width: 100%;
     text-align: center;
-    height: 100%;
   }
 
   .safe__hgand--img {
@@ -834,8 +846,9 @@
   }
 
   .delevar__area {
-    padding-bottom: 138px;
+    /* padding-bottom: 138px; */
     padding-top: 50px;
+    font-family: "Poppins", sans-serif;
   }
 
   .footer__bg {
@@ -856,12 +869,12 @@
 
   .footer---top-tx {
     text-align: center;
-    max-width: 300px;
     display: block;
     margin: auto;
     margin-top: 20px;
     z-index: 9999;
     position: relative;
+    font-family: "Poppins", sans-serif;
   }
 
   .footer---top-tx h4 {
@@ -869,6 +882,7 @@
     color: #e2b313;
     font-weight: 700;
     margin: 0;
+    font-family: "Poppins", sans-serif;
   }
 
   .hero__area.hero__mobile {
@@ -891,7 +905,6 @@
     padding-bottom: 90px;
     background: #153243;
     margin: 0;
-    margin-top: -2px;
   }
 
   .hero-bg-b {
@@ -929,9 +942,8 @@
 
   .safe__hand__ct p {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 16px;
     margin-bottom: 5px;
-    font-weight: 300;
   }
 
   .owl-nav button {
@@ -958,7 +970,7 @@
   }
 
   .safe__hand__ct span {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .above__content h4::before {
@@ -984,6 +996,7 @@
     padding-bottom: 130px;
     height: auto;
     position: relative;
+    min-height: 600px;
   }
 
   .above--res--bg {
@@ -1019,6 +1032,7 @@
 
   .delevary__mobil {
     display: block;
+    padding-top: 20px;
   }
 
   .delevary__mobil img {
@@ -1034,6 +1048,7 @@
     height: auto;
     display: block;
     width: 100%;
+    opacity: 0.7;
   }
 
   .footer__single__form.form__wd input {
@@ -1056,6 +1071,7 @@
   }
 
   .hero__wrap {
+    margin-top: 10vh;
     padding: 0 15px;
   }
 
@@ -1085,7 +1101,7 @@
   }
 
   .hero__content h4 {
-    font-size: 25px;
+    font-size: 22px;
   }
 
   .hero__content p {
@@ -1130,6 +1146,8 @@
   }
 
   .footer__wrap {
+    width: 80vw;
+    margin: 0 auto;
   }
 
   .above__wrap {
@@ -1141,11 +1159,11 @@
     display: block;
   }
 
-  .footer__box h3 span {
+  .footer__box h4 span {
     display: block;
   }
 
-  .footer__box h3 {
+  .footer__box h4 {
     font-size: 20px;
     line-height: 34px;
     margin-bottom: 18px;
@@ -1159,7 +1177,7 @@
     width: 280px;
   }
 
-  .footer__box h3 span {
+  .footer__box h4 span {
     display: block;
   }
 
@@ -1173,5 +1191,8 @@
 }
 
 /* SM Small Device :550px. */
-@media only screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
+  .foooter__area {
+    padding: 0px;
+  }
 }

@@ -1,85 +1,18 @@
+import { Link } from "gatsby"
 import React from "react"
 import B1 from "../../assets/img/b1.svg"
 
-const Clients = () => {
+const Clients = ({ clients }) => {
   return (
     <>
       <div className="branf__fx">
-        <div className="brand__single">
-          <a href="#">
-            <img src={B1} alt="" />
-          </a>
-        </div>
-        <div className="brand__single">
-          <a href="#">
-            <img src={B1} alt="" />
-          </a>
-        </div>
-        <div className="brand__single">
-          <a href="#">
-            <img src={B1} alt="" />
-          </a>
-        </div>
-        <div className="brand__single">
-          <a href="#">
-            <img src={B1} alt="" />
-          </a>
-        </div>
-        <div className="brand__single">
-          <a href="#">
-            <img src={B1} alt="" />
-          </a>
-        </div>
-        <div className="brand__single">
-          <a href="#">
-            <img src={B1} alt="" />
-          </a>
-        </div>
-        <div className="brand__single">
-          <a href="#">
-            <img src={B1} alt="" />
-          </a>
-        </div>
-        <div className="brand__single">
-          <a href="#">
-            <img src={B1} alt="" />
-          </a>
-        </div>
-        <div className="brand__single">
-          <a href="#">
-            <img src={B1} alt="" />
-          </a>
-        </div>
-        <div className="brand__single">
-          <a href="#">
-            <img src={B1} alt="" />
-          </a>
-        </div>
-        <div className="brand__single">
-          <a href="#">
-            <img src={B1} alt="" />
-          </a>
-        </div>
-        <div className="brand__single">
-          <a href="#">
-            <img src={B1} alt="" />
-          </a>
-        </div>
-        <div className="brand__single">
-          <a href="#">
-            <img src={B1} alt="" />
-          </a>
-        </div>
-        <div className="brand__single">
-          <a href="#">
-            <img src={B1} alt="" />
-          </a>
-        </div>
-        <div className="brand__single">
-          <a href="#">
-            <img src={B1} alt="" />
-          </a>
-        </div>
+        {clients?.map((item, i) => (
+          <div className="brand__single" key={i}>
+            <Link to={item?.client_image?.redirect_url}>
+              <img src={item?.client_image?.localFile?.publicURL} alt="" />
+            </Link>
+          </div>
+        ))}
       </div>
     </>
   )

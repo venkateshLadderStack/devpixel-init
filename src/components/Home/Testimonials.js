@@ -5,11 +5,12 @@ import User from "../../assets/img/p.png"
 import PrevImg from "../../assets/img/arow-left.svg"
 import NextImg from "../../assets/img/arrow-ri.svg"
 
-const Testimonials = () => {
+const Testimonials = ({ data }) => {
   const customeSlider = useRef()
 
   const settings = {
-    dots: false,
+    dots: true,
+    dotsClass: "button__bar",
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -31,36 +32,19 @@ const Testimonials = () => {
       </Left>
       <TestimonialWrapper>
         <Slider {...settings} ref={customeSlider}>
-          <Single>
-            <div className="safe__hand__fx">
-              <Avatar className="safe__hgand--img">
-                <img src={User} alt="" />
-              </Avatar>
-              <div className="safe__hand__ct">
-                <p>
-                  We have worked with this team for many years and have put many
-                  demands on them with short notice. They have always stepped up
-                  to the challenge and delivered.
-                </p>
-                <span>Darren Bailey1, CTO | ISTE</span>
-              </div>
-            </div>
-          </Single>
-          <Single>
-            <div className="safe__hand__fx">
-              <Avatar className="safe__hgand--img">
-                <img src={User} alt="" />
-              </Avatar>
-              <div className="safe__hand__ct">
-                <p>
-                  We have worked with this team for many years and have put many
-                  demands on them with short notice. They have always stepped up
-                  to the challenge and delivered.
-                </p>
-                <span>Darren Bailey1, CTO | ISTE</span>
-              </div>
-            </div>
-          </Single>
+          {data?.map((item, i) => (
+            <Single key={i}>
+              <Card className="safe__hand__fx">
+                <Avatar className="safe__hgand--img">
+                  <img src={item?.image?.localFile?.publicURL} alt="" />
+                </Avatar>
+                <div className="safe__hand__ct">
+                  <p>{item?.quote}</p>
+                  <span>{item?.author_detail}</span>
+                </div>
+              </Card>
+            </Single>
+          ))}
         </Slider>
       </TestimonialWrapper>
       <Right onClick={() => customeSlider.current.slickNext()}>
@@ -95,6 +79,12 @@ const Left = styled.div`
   width: 63px;
   height: 63px;
   z-index: 10;
+  cursor: pointer;
+
+  &:hover {
+    border-radius: 50%;
+    box-shadow: 0 0 15px #1c1c1c;
+  }
 
   @media screen and (max-width: 767px) {
     display: none;
@@ -106,6 +96,12 @@ const Right = styled.div`
   width: 63px;
   height: 63px;
   z-index: 9;
+  cursor: pointer;
+
+  &:hover {
+    border-radius: 50%;
+    box-shadow: 0 0 15px #1c1c1c;
+  }
 
   @media screen and (max-width: 767px) {
     display: none;
@@ -114,6 +110,13 @@ const Right = styled.div`
 
 const Single = styled.div`
   height: 224px;
+`
+
+const Card = styled.div`
+  height: 224px;
+  @media screen and (max-width: 767px) {
+    height: unset;
+  }
 `
 
 const Avatar = styled.div`
