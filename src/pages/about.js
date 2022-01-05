@@ -86,8 +86,8 @@ const About = props => {
                   return (
                     <img
                       key={key}
-                      src={image.image_file.localFile.publicURL}
-                      alt={image.image_file.localFile.name}
+                      src={image?.image_file?.localFile?.publicURL}
+                      alt={image?.image_file?.localFile?.name}
                       className="img-fluid my-4"
                     />
                   )
@@ -122,9 +122,9 @@ const About = props => {
             {teamMembers.map((member, key) => {
               return (
                 <TeamCard
-                  title={member.title}
-                  name={member.name}
-                  img={member.image.localFile.childImageSharp.fixed.src}
+                  title={member?.title}
+                  name={member?.name}
+                  img={member?.image?.localFile?.childImageSharp?.fixed.src}
                   key={key}
                 />
               )
