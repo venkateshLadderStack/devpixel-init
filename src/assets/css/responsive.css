@@ -800,6 +800,7 @@
     display: block;
     width: 100%;
     text-align: center;
+    padding-left: 1px;
   }
 
   .safe__hgand--img {
