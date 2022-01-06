@@ -14,16 +14,16 @@ const Newheader = () => {
         <div class={`offcanva__menu`}>
           <ul>
             <li>
-              <a href="#">Company</a>
+              <Link to="/about">Company</Link>
             </li>
             <li>
-              <a href="#">Salesforce</a>
+              <Link to="/salesforce">Salesforce</Link>
             </li>
             <li>
-              <a href="#">UX Strategy</a>
+              <Link to="ux">UX Strategy</Link>
             </li>
             <li>
-              <a href="#">Approach</a>
+              <Link to="/">Approach</Link>
             </li>
           </ul>
         </div>
@@ -45,16 +45,16 @@ const Newheader = () => {
                     <div className="header__menu">
                       <ul>
                         <li>
-                          <a href="#">Company</a>
+                          <Link to="/about">Company</Link>
                         </li>
                         <li>
-                          <a href="#">Salesforce</a>
+                          <Link to="/salesforce">Salesforce</Link>
                         </li>
                         <li>
-                          <a href="#">UX Strategy</a>
+                          <Link to="ux">UX Strategy</Link>
                         </li>
                         <li>
-                          <a href="#">Approach</a>
+                          <Link to="/">Approach</Link>
                         </li>
                       </ul>
                     </div>
@@ -72,7 +72,7 @@ const Newheader = () => {
                       </a>
                     </div>
                     <div className="header__btn">
-                      <a href="#">Contact Us</a>
+                      <Link to="/contact">Contact Us</Link>
                     </div>
                   </div>
                   <div
