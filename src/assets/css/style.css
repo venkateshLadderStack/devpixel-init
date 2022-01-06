@@ -209,7 +209,7 @@ a {
   padding-bottom: 90px;
   background: #153243;
   position: relative;
-  margin-top: 1050px;
+  /* margin-top: 1050px; */
   font-family: "Poppins", sans-serif;
 }
 .hero-bg-b {

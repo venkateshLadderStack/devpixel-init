@@ -6,7 +6,7 @@
   .brand__aera {
     padding-top: 50px;
     padding-bottom: 90px;
-    margin-top: 112vh;
+    /* margin-top: 112vh; */
   }
 
   .hero__area {
@@ -32,9 +32,9 @@
 
 /* XL Device :1200px. */
 @media (min-width: 3839px) and (max-width: 6000px) {
-  .brand__aera {
+  /* .brand__aera {
     margin-top: 100vh;
-  }
+  } */
 
   .hero-bg-b {
     top: -40%;
@@ -105,10 +105,10 @@
     z-index: 99999;
     font-family: "Poppins" sans-serif;
   }
-
+  /* 
   .brand__aera {
     margin-top: 778px;
-  }
+  } */
 
   .hero-bg-b {
     top: -10%;
@@ -116,9 +116,9 @@
 }
 /* XL Device :1200px. */
 @media (min-width: 3839px) and (max-width: 6000px) {
-  .brand__aera {
+  /* .brand__aera {
     margin-top: 100vh;
-  }
+  } */
 
   .hero-bg-b {
     top: -40%;
@@ -152,9 +152,9 @@
     top: -9%;
   }
 
-  .brand__aera {
+  /* .brand__aera {
     margin-top: 611px;
-  }
+  } */
 
   .brand__title h4 {
     font-size: 30px;
@@ -306,9 +306,9 @@
     padding-top: 110px;
   }
 
-  .brand__aera {
+  /* .brand__aera {
     margin-top: 533px;
-  }
+  } */
 
   .hero-bg-b {
     top: -7%;

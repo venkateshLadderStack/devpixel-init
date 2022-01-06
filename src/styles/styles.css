@@ -539,7 +539,7 @@ section.module.parallax {
   background-position: top center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: auto 1038px;
+  background-size: cover;
   background-color: #d6e9f5;
 }
 #ideals {

@@ -9,8 +9,7 @@ const Testimonials = ({ data }) => {
   const customeSlider = useRef()
 
   const settings = {
-    dots: true,
-    dotsClass: "button__bar",
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -20,7 +19,10 @@ const Testimonials = ({ data }) => {
     responsive: [
       {
         breakpoint: 768,
-        settings: {},
+        settings: {
+          dots: true,
+          dotsClass: "button__bar",
+        },
       },
     ],
   }
