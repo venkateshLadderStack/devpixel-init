@@ -939,6 +939,7 @@
     width: 100%;
     margin-left: 0;
     text-align: left;
+    padding: 0px 2px;
   }
 
   .safe__hand__ct p {
@@ -1003,8 +1004,6 @@
   .above--res--bg {
     position: absolute;
     bottom: -87px;
-    left: -3px;
-    right: -3px;
   }
 
   .business--area {

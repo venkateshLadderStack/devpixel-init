@@ -28,6 +28,7 @@ const Parallax = styled.section`
   height: 100%;
   background-image: url(${props => props.img});
   background-size: cover;
+  margin-bottom: -1px;
 
   @media (max-width: 500px) {
     background-image: url(${props => props.mobileImg});
@@ -54,14 +55,6 @@ const Home = props => {
   const { data } = props
   const acf = props?.data?.wordpressPage?.acf
   const homePageContent = props.data.allWordpressPage.nodes[0].acf
-  const companyHeading = homePageContent.home_page_head
-  const companyLogos = homePageContent.company_logos.logo
-  const companyTestimonials = homePageContent.testimonials.testimonial
-  const companyPromoBoxes = homePageContent.promos.promo
-  const companyApproach = homePageContent.our_approach
-  const companyDiscoverDesign = homePageContent.discover_design
-
-  console.log(acf?.stages)
 
   const pathPrepare = $el => {
     var lineLength = $el[0]?.getTotalLength()
@@ -237,7 +230,7 @@ const Home = props => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{homePageContent.home_page_head.meta_tag}</title>
+        <title>{homePageContent?.home_page_head?.meta_tag}</title>
         <meta
           name="description"
           content={
@@ -265,155 +258,65 @@ const Home = props => {
       <BaseImage className="base">
         <img src={acf?.hero?.background_image_2?.localFile?.publicURL} />
       </BaseImage>
-      <div id="maincontain">
-        <Brand acf={acf} />
-        <Communication communication={acf?.communication} />
 
-        <div className="business--area p-20">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="business__wrap">
-                  <div className="business__fx">
-                    <div className="business__lf">
-                      <div className="business--img">
-                        <img
-                          src={
-                            acf?.stages?.stage_1?.image?.localFile?.publicURL
-                          }
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div className="business__ri">
-                      <div className="business__ct">
-                        <h4>{acf?.stages?.stage_1?.heading}</h4>
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: acf?.stages?.stage_1?.description,
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="sample__wrap">
-                  <div className="sample__title">
-                    <h4>Sample Deliverables</h4>
-                  </div>
-                  <div className="sample__fx">
-                    <div className="sample__single--box">
+      <Brand acf={acf} />
+      <Communication communication={acf?.communication} />
+
+      <div className="business--area p-20">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="business__wrap">
+                <div className="business__fx">
+                  <div className="business__lf">
+                    <div className="business--img">
                       <img
-                        src={
-                          acf?.stages?.stage_1?.preview_1?.localFile?.publicURL
-                        }
-                        alt=""
-                      />
-                    </div>
-                    <div className="sample__single--box">
-                      <img
-                        src={
-                          acf?.stages?.stage_1?.preview_2?.localFile?.publicURL
-                        }
-                        alt=""
-                      />
-                    </div>
-                    <div className="sample__single--box">
-                      <img
-                        src={
-                          acf?.stages?.stage_1?.preview_3?.localFile?.publicURL
-                        }
+                        src={acf?.stages?.stage_1?.image?.localFile?.publicURL}
                         alt=""
                       />
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="learning">
-                  <div className="business__fx">
-                    <div className="business__lf learning--img-res">
-                      <div className="business--img">
-                        <img
-                          src={
-                            acf?.stages?.stage_2?.image?.localFile?.publicURL
-                          }
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div className="business__ri">
-                      <div className="business__ct">
-                        <h4>{acf?.stages?.stage_2?.heading}</h4>
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: acf?.stages?.stage_2?.description,
-                          }}
-                        />
-                      </div>
-                    </div>
-                    <div className="business__lf learning--img">
-                      <div className="business--img">
-                        <img
-                          src={
-                            acf?.stages?.stage_2?.image?.localFile?.publicURL
-                          }
-                          alt=""
-                        />
-                      </div>
+                  <div className="business__ri">
+                    <div className="business__ct">
+                      <h4>{acf?.stages?.stage_1?.heading}</h4>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: acf?.stages?.stage_1?.description,
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="delevar__area p-20">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="delevar__wrap">
-                  <div className="sample__title">
-                    <h4>Sample Deliverables</h4>
-                  </div>
-                  <div className="delevar__image--wrap">
-                    <div className="delevar__single--img">
-                      <img
-                        src={
-                          acf?.stages?.stage_2?.preview_1?.localFile?.publicURL
-                        }
-                        alt=""
-                      />
-                    </div>
-                    <div className="delevar__single--img delevari--mid">
-                      <img
-                        src={
-                          acf?.stages?.stage_2?.preview_2?.localFile?.publicURL
-                        }
-                        alt=""
-                      />
-                    </div>
-                    <div className="delevar__single--img delevari--lft">
-                      <img
-                        src={
-                          acf?.stages?.stage_2?.preview_3?.localFile?.publicURL
-                        }
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div className="delevary__mobil">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="sample__wrap">
+                <div className="sample__title">
+                  <h4>Sample Deliverables</h4>
+                </div>
+                <div className="sample__fx">
+                  <div className="sample__single--box">
                     <img
                       src={
-                        acf?.stages?.stage_2?.preview_mobile?.localFile
-                          ?.publicURL
+                        acf?.stages?.stage_1?.preview_1?.localFile?.publicURL
+                      }
+                      alt=""
+                    />
+                  </div>
+                  <div className="sample__single--box">
+                    <img
+                      src={
+                        acf?.stages?.stage_1?.preview_2?.localFile?.publicURL
+                      }
+                      alt=""
+                    />
+                  </div>
+                  <div className="sample__single--box">
+                    <img
+                      src={
+                        acf?.stages?.stage_1?.preview_3?.localFile?.publicURL
                       }
                       alt=""
                     />
@@ -421,44 +324,123 @@ const Home = props => {
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="control__wrap">
-                  <div className="business__fx">
-                    <div className="business__lf">
-                      <div className="business--img">
-                        <img
-                          src={
-                            acf?.stages?.stage_3?.image?.localFile?.publicURL
-                          }
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div className="business__ri">
-                      <div className="business__ct">
-                        <h4>{acf?.stages?.stage_3?.heading}</h4>
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: acf?.stages?.stage_3?.description,
-                          }}
-                        />
-                      </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="learning">
+                <div className="business__fx">
+                  <div className="business__lf learning--img-res">
+                    <div className="business--img">
+                      <img
+                        src={acf?.stages?.stage_2?.image?.localFile?.publicURL}
+                        alt=""
+                      />
                     </div>
                   </div>
-                  <div className="footer---top-tx">
-                    <h4>You can count on us. You can count on DevPixel.</h4>
+                  <div className="business__ri">
+                    <div className="business__ct">
+                      <h4>{acf?.stages?.stage_2?.heading}</h4>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: acf?.stages?.stage_2?.description,
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div className="business__lf learning--img">
+                    <div className="business--img">
+                      <img
+                        src={acf?.stages?.stage_2?.image?.localFile?.publicURL}
+                        alt=""
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <footer className="fancy-footer"></footer>
-        <FooterFormContact />
-        <BackToTopItem />
       </div>
+
+      <div className="delevar__area p-20">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="delevar__wrap">
+                <div className="sample__title">
+                  <h4>Sample Deliverables</h4>
+                </div>
+                <div className="delevar__image--wrap">
+                  <div className="delevar__single--img">
+                    <img
+                      src={
+                        acf?.stages?.stage_2?.preview_1?.localFile?.publicURL
+                      }
+                      alt=""
+                    />
+                  </div>
+                  <div className="delevar__single--img delevari--mid">
+                    <img
+                      src={
+                        acf?.stages?.stage_2?.preview_2?.localFile?.publicURL
+                      }
+                      alt=""
+                    />
+                  </div>
+                  <div className="delevar__single--img delevari--lft">
+                    <img
+                      src={
+                        acf?.stages?.stage_2?.preview_3?.localFile?.publicURL
+                      }
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div className="delevary__mobil">
+                  <img
+                    src={
+                      acf?.stages?.stage_2?.preview_mobile?.localFile?.publicURL
+                    }
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="control__wrap">
+                <div className="business__fx">
+                  <div className="business__lf">
+                    <div className="business--img">
+                      <img
+                        src={acf?.stages?.stage_3?.image?.localFile?.publicURL}
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div className="business__ri">
+                    <div className="business__ct">
+                      <h4>{acf?.stages?.stage_3?.heading}</h4>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: acf?.stages?.stage_3?.description,
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="footer---top-tx">
+                  <h4>You can count on us. You can count on DevPixel.</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer className="fancy-footer"></footer>
+      <FooterFormContact />
     </>
   )
 }
@@ -477,177 +459,9 @@ export const HomeQuery = graphql`
           }
         }
         acf {
-          parallex_images {
-            first_layer {
-              localFile {
-                name
-                publicURL
-              }
-            }
-            second_layer {
-              localFile {
-                name
-                publicURL
-              }
-            }
-            mobile_layer {
-              localFile {
-                name
-                publicURL
-              }
-            }
-          }
-          company_logos {
-            logo {
-              file {
-                localFile {
-                  name
-                  publicURL
-                }
-              }
-            }
-          }
-          develop {
-            develop_heading
-            develop_sub_content
-            develop_second_sub_content
-            image {
-              localFile {
-                name
-                publicURL
-              }
-            }
-            second_image {
-              localFile {
-                name
-                publicURL
-              }
-            }
-          }
-          promos {
-            promo {
-              heading
-              sub_content
-              class
-              image {
-                localFile {
-                  name
-                  publicURL
-                }
-              }
-            }
-          }
-          discover_design {
-            logo_icon {
-              localFile {
-                publicURL
-              }
-            }
-            discovery_heading
-            discovery_sub_content
-            discovery_sub_heading
-            discovery_sub_heading_content
-            discovery_sub_heading_image {
-              localFile {
-                publicURL
-              }
-            }
-            circle_image {
-              localFile {
-                publicURL
-              }
-            }
-            sample_deliverables {
-              arrow_line {
-                localFile {
-                  publicURL
-                }
-              }
-              deliverable {
-                heading
-                content
-                image {
-                  localFile {
-                    publicURL
-                  }
-                }
-              }
-            }
-            design_heading
-            design_sub_content
-            design_second_sub_content
-            second_image {
-              localFile {
-                name
-                publicURL
-              }
-            }
-            image {
-              localFile {
-                name
-                publicURL
-              }
-            }
-          }
-          testimonials {
-            testimonial {
-              quote
-              author_detail
-              image {
-                localFile {
-                  name
-                  publicURL
-                }
-              }
-            }
-          }
-          our_approach {
-            heading
-            sub_heading
-          }
-          why_devpixel {
-            heading
-            why_box {
-              heading
-              sub_heading
-              icon {
-                localFile {
-                  name
-                  publicURL
-                }
-              }
-            }
-          }
           home_page_head {
             heading
             meta_tag
-            sub_heading
-            sub_content
-            salesforce_circle_mobile {
-              localFile {
-                publicURL
-              }
-            }
-            sales_force_circle_image {
-              third_layer {
-                localFile {
-                  name
-                  publicURL
-                }
-              }
-              second_layer {
-                localFile {
-                  name
-                  publicURL
-                }
-              }
-              first_layer {
-                localFile {
-                  name
-                  publicURL
-                }
-              }
-            }
           }
         }
       }

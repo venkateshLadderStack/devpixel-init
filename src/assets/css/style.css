@@ -298,6 +298,7 @@ a {
 .safe__hand__ct {
   width: 601px;
   margin-left: 30px;
+  padding: 0px 2px;
 }
 .safe__hand__ct p {
   font-size: 18px;
@@ -666,6 +667,7 @@ focus {
   left: -100%;
   top: 0;
   transition: 0.3s;
+  font-family: "Poppins" sans-serif;
 }
 .cross a {
   position: absolute;
