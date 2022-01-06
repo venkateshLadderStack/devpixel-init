@@ -681,7 +681,7 @@ focus {
   font-family: "Poppins" sans-serif;
 }
 .offcanva__menu ul li a {
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
   font-weight: 500;
   padding: 10px 20px;
@@ -695,6 +695,7 @@ focus {
   padding-left: 40px;
   color: #ffb11c;
 }
+
 .overlay {
   position: fixed;
   width: 100%;

@@ -64,7 +64,7 @@ const About = props => {
             </div>
           </div>
         </section>
-        <section className="my-100">
+        <section className="my-100 bg-light">
           <div className="wrap">
             <div className="row">
               <div className="col-12 col-md-6 life">
