@@ -53,7 +53,6 @@ const About = props => {
                 <h2 className="text-white mb-4 twoguy">{aboutPageHeading}</h2>
 
                 <div
-                  className="twoguy_text"
                   dangerouslySetInnerHTML={{ __html: aboutPageSubHeading }}
                 />
               </div>

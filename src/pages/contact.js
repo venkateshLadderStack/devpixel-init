@@ -74,7 +74,7 @@ const Contact = props => {
           </div>
         </div>
       </div>
-      <section className="py-5 bg-white">
+      <section className="pt-5 cont2">
         <div className="wrap">
           <div className="row">
             <div className="col-12 col-md-6">
@@ -94,7 +94,7 @@ const Contact = props => {
           </div>
         </div>
       </section>
-      <section className="py-100 bg-white">
+      <section className="my-100 cont1">
         <div className="wrap">
           <div className="row">
             <div className="col-12">
@@ -104,7 +104,7 @@ const Contact = props => {
 
           <div className="row">
             <div className="col-12 col-md-4">
-              <img src={contactEmailIcon} alt="email" className="mb-4 " />
+              <img src={contactEmailIcon} alt="email" className="mb-4" />
               <div
                 className="text-dark"
                 dangerouslySetInnerHTML={{ __html: contactEmailText }}
@@ -129,7 +129,7 @@ const Contact = props => {
           </div>
         </div>
       </section>
-      <section className="contact-area bg-white">
+      <section className="contact-area">
         <div className="wrap">
           <div className="row">
             <div className="col-lg-12">

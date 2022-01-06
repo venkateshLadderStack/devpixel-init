@@ -241,11 +241,11 @@ const Home = props => {
         />
       </Helmet>
       <Navbar />
-      <Hero hero={acf?.hero} />
-      <div id="maincontain">
+      <Hero acf={acf} />
+      <div id="maincontain" style={{ backgroundColor: "#1e3f53" }}>
         <Brand acf={acf} />
-        <Communication communication={acf?.communication} />
 
+        <Communication communication={acf?.communication} />
         <div className="business--area p-20">
           <div className="container">
             <div className="row">
@@ -391,7 +391,6 @@ const Home = props => {
             </div>
           </div>
         </div>
-
         <div className="delevar__area p-20">
           <div className="container">
             <div className="row">
@@ -486,7 +485,6 @@ const Home = props => {
             </div>
           </div>
         </div>
-
         <footer className="fancy-footer"></footer>
         <FooterFormContact />
       </div>

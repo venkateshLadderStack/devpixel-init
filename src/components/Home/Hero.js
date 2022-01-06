@@ -1,7 +1,8 @@
 import React from "react"
+import styled from "styled-components"
 import useWindowSize from "../../../hooks/useWindowSize"
 
-const Hero = ({ hero }) => {
+const Hero = ({ acf }) => {
   const { width } = useWindowSize()
 
   return (
@@ -11,8 +12,8 @@ const Hero = ({ hero }) => {
         style={{
           backgroundImage: `url(${
             width > 768
-              ? hero?.background_image_main?.localFile?.publicURL
-              : hero?.mobile_background_image?.localFile?.publicURL
+              ? acf?.hero?.background_image_main?.localFile?.publicURL
+              : acf?.hero?.mobile_background_image?.localFile?.publicURL
           })`,
         }}
       >
@@ -26,17 +27,38 @@ const Hero = ({ hero }) => {
                   data-aos-delay="50"
                   data-aos-duration="1000"
                 >
-                  <a href="#">{hero?.sub_heading}</a>
-                  <h4>{hero?.heading}</h4>
-                  <p dangerouslySetInnerHTML={{ __html: hero?.description }} />
+                  <a href="#">{acf?.hero?.sub_heading}</a>
+                  <h4>{acf?.hero?.heading}</h4>
+                  <p
+                    dangerouslySetInnerHTML={{ __html: acf?.hero?.description }}
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <MobileBottomImage>
+        <img src={acf?.hero?.background_image_2?.localFile?.publicURL} alt="" />
+      </MobileBottomImage>
     </>
   )
 }
+
+const MobileBottomImage = styled.div`
+  display: none;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+
+    img {
+      object-fit: cover;
+      height: 270px;
+    }
+  }
+`
 
 export default Hero
