@@ -10,11 +10,11 @@ import TeamCard from "../components/TeamCard"
 
 const About = props => {
   const aboutPage = props.data.allWordpressPage.edges[0].node.acf
-  const aboutPageHeading = aboutPage.about_heading.page_heading
-  const metaTitle = aboutPage.about_heading.meta_tag
+  const aboutPageHeading = aboutPage?.about_heading.page_heading
+  const metaTitle = aboutPage?.about_heading.meta_tag
   const aboutPageSubHeading = aboutPage.about_heading.page_heading_content
   const aboutPageImage =
-    aboutPage.about_heading.page_heading_image.localFile.publicURL
+    aboutPage?.about_heading?.page_heading_image?.localFile.publicURL
   const aboutPageList = aboutPage.list_component
   const aboutPageMainContentHeading = aboutPage.about_content.content_heading
   const aboutPageMainContentSub = aboutPage.about_content.content_sub
