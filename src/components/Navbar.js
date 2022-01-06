@@ -1,6 +1,7 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Bars from "../assets/img/bar.svg"
 import useWindowSize from "../../hooks/useWindowSize"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import Logo from "../assets/img/header--logo.svg"
 
 const Newheader = () => {

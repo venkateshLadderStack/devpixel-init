@@ -40,6 +40,16 @@ const BaseImage = styled.div`
   }
 `
 
+const HeroText = styled.div`
+  background: transparent;
+  position: absolute;
+  top: 20vh;
+
+  @media (max-width: 500px) {
+    top: 10vh;
+  }
+`
+
 const Home = props => {
   const { data } = props
   const acf = props?.data?.wordpressPage?.acf
@@ -238,6 +248,13 @@ const Home = props => {
       </Helmet>
       <Navbar />
       <section className="effect">
+        <HeroText className="hero__wrap">
+          <div className="hero__content">
+            <a href="#">{acf?.hero?.sub_heading}</a>
+            <h4>{acf?.hero?.heading}</h4>
+            <p dangerouslySetInnerHTML={{ __html: acf?.hero?.description }} />
+          </div>
+        </HeroText>
         <Parallax
           className="module parallax"
           img={acf?.hero?.background_image_main?.localFile?.publicURL}
