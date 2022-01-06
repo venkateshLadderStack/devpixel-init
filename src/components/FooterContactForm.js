@@ -77,7 +77,12 @@ const FooterFormContact = props => {
       <div className="wrap">
         <div className="row">
           <div className="col-md-12 text-center">
-            <div className="col-md-9 new-f">
+            <div
+              className="col-md-9 new-f"
+              data-aos="fade-up"
+              data-aos-delay="50"
+              data-aos-duration="3000"
+            >
               <form id="contact-us-form" onSubmit={handleSubmit}>
                 <h2 className="text-white">
                   Tell us about your project and let’s get started!

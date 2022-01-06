@@ -18,6 +18,7 @@ import BackToTopItem from "../components/BackTopTop"
 import Brand from "../components/Home/Brand"
 import Communication from "../components/Home/Communication"
 import Navbar from "../components/Navbar"
+import Hero from "../components/Home/Hero"
 
 const CompanyLogoHeader = styled.h2`
   font-size: 16px !important;
@@ -240,119 +241,149 @@ const Home = props => {
         />
       </Helmet>
       <Navbar />
-      <section className="effect">
-        <HeroText className="hero__wrap">
-          <div className="hero__content">
-            <a href="#">{acf?.hero?.sub_heading}</a>
-            <h4>{acf?.hero?.heading}</h4>
-            <p dangerouslySetInnerHTML={{ __html: acf?.hero?.description }} />
-          </div>
-        </HeroText>
-        <Parallax
-          className="module parallax"
-          img={acf?.hero?.background_image_main?.localFile?.publicURL}
-          mobileImg={acf?.hero?.mobile_background_image?.localFile?.publicURL}
-        />
-        {/* <section className=" parallax-1"></section> */}
-      </section>
-      <BaseImage className="base">
-        <img src={acf?.hero?.background_image_2?.localFile?.publicURL} />
-      </BaseImage>
+      <Hero hero={acf?.hero} />
+      <div id="maincontain">
+        <Brand acf={acf} />
+        <Communication communication={acf?.communication} />
 
-      <Brand acf={acf} />
-      <Communication communication={acf?.communication} />
-
-      <div className="business--area p-20">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="business__wrap">
-                <div className="business__fx">
-                  <div className="business__lf">
-                    <div className="business--img">
+        <div className="business--area p-20">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="business__wrap">
+                  <div className="business__fx">
+                    <div className="business__lf">
+                      <div
+                        className="business--img"
+                        data-aos="zoom-in"
+                        data-aos-delay="50"
+                        data-aos-duration="1000"
+                      >
+                        <img
+                          src={
+                            acf?.stages?.stage_1?.image?.localFile?.publicURL
+                          }
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="business__ri"
+                      data-aos="fade-up"
+                      data-aos-delay="50"
+                      data-aos-duration="3000"
+                    >
+                      <div className="business__ct">
+                        <h4>{acf?.stages?.stage_1?.heading}</h4>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: acf?.stages?.stage_1?.description,
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="sample__wrap">
+                  <div className="sample__title">
+                    <h4>Sample Deliverables</h4>
+                  </div>
+                  <div className="sample__fx">
+                    <div
+                      className="sample__single--box"
+                      data-aos="zoom-in"
+                      data-aos-delay="50"
+                      data-aos-duration="1000"
+                    >
                       <img
-                        src={acf?.stages?.stage_1?.image?.localFile?.publicURL}
+                        src={
+                          acf?.stages?.stage_1?.preview_1?.localFile?.publicURL
+                        }
                         alt=""
                       />
                     </div>
-                  </div>
-                  <div className="business__ri">
-                    <div className="business__ct">
-                      <h4>{acf?.stages?.stage_1?.heading}</h4>
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: acf?.stages?.stage_1?.description,
-                        }}
+                    <div
+                      className="sample__single--box"
+                      data-aos="zoom-in"
+                      data-aos-delay="100"
+                      data-aos-duration="1100"
+                    >
+                      <img
+                        src={
+                          acf?.stages?.stage_1?.preview_2?.localFile?.publicURL
+                        }
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      className="sample__single--box"
+                      data-aos="zoom-in"
+                      data-aos-delay="150"
+                      data-aos-duration="1200"
+                    >
+                      <img
+                        src={
+                          acf?.stages?.stage_1?.preview_3?.localFile?.publicURL
+                        }
+                        alt=""
                       />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="sample__wrap">
-                <div className="sample__title">
-                  <h4>Sample Deliverables</h4>
-                </div>
-                <div className="sample__fx">
-                  <div className="sample__single--box">
-                    <img
-                      src={
-                        acf?.stages?.stage_1?.preview_1?.localFile?.publicURL
-                      }
-                      alt=""
-                    />
-                  </div>
-                  <div className="sample__single--box">
-                    <img
-                      src={
-                        acf?.stages?.stage_1?.preview_2?.localFile?.publicURL
-                      }
-                      alt=""
-                    />
-                  </div>
-                  <div className="sample__single--box">
-                    <img
-                      src={
-                        acf?.stages?.stage_1?.preview_3?.localFile?.publicURL
-                      }
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="learning">
-                <div className="business__fx">
-                  <div className="business__lf learning--img-res">
-                    <div className="business--img">
-                      <img
-                        src={acf?.stages?.stage_2?.image?.localFile?.publicURL}
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div className="business__ri">
-                    <div className="business__ct">
-                      <h4>{acf?.stages?.stage_2?.heading}</h4>
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="learning">
+                  <div className="business__fx">
+                    <div className="business__lf learning--img-res">
                       <div
-                        dangerouslySetInnerHTML={{
-                          __html: acf?.stages?.stage_2?.description,
-                        }}
-                      />
+                        className="business--img"
+                        data-aos="zoom-in"
+                        data-aos-delay="50"
+                        data-aos-duration="1000"
+                      >
+                        <img
+                          src={
+                            acf?.stages?.stage_2?.image?.localFile?.publicURL
+                          }
+                          alt=""
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="business__lf learning--img">
-                    <div className="business--img">
-                      <img
-                        src={acf?.stages?.stage_2?.image?.localFile?.publicURL}
-                        alt=""
-                      />
+                    <div
+                      className="business__ri"
+                      data-aos="fade-up"
+                      data-aos-delay="50"
+                      data-aos-duration="3000"
+                    >
+                      <div className="business__ct">
+                        <h4>{acf?.stages?.stage_2?.heading}</h4>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: acf?.stages?.stage_2?.description,
+                          }}
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="business__lf learning--img"
+                      data-aos="zoom-in"
+                      data-aos-delay="50"
+                      data-aos-duration="1000"
+                    >
+                      <div className="business--img">
+                        <img
+                          src={
+                            acf?.stages?.stage_2?.image?.localFile?.publicURL
+                          }
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -360,87 +391,105 @@ const Home = props => {
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="delevar__area p-20">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="delevar__wrap">
-                <div className="sample__title">
-                  <h4>Sample Deliverables</h4>
-                </div>
-                <div className="delevar__image--wrap">
-                  <div className="delevar__single--img">
-                    <img
-                      src={
-                        acf?.stages?.stage_2?.preview_1?.localFile?.publicURL
-                      }
-                      alt=""
-                    />
+        <div className="delevar__area p-20">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="delevar__wrap">
+                  <div className="sample__title">
+                    <h4>Sample Deliverables</h4>
                   </div>
-                  <div className="delevar__single--img delevari--mid">
-                    <img
-                      src={
-                        acf?.stages?.stage_2?.preview_2?.localFile?.publicURL
-                      }
-                      alt=""
-                    />
-                  </div>
-                  <div className="delevar__single--img delevari--lft">
-                    <img
-                      src={
-                        acf?.stages?.stage_2?.preview_3?.localFile?.publicURL
-                      }
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="delevary__mobil">
-                  <img
-                    src={
-                      acf?.stages?.stage_2?.preview_mobile?.localFile?.publicURL
-                    }
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="control__wrap">
-                <div className="business__fx">
-                  <div className="business__lf">
-                    <div className="business--img">
+                  <div className="delevar__image--wrap">
+                    <div className="delevar__single--img">
                       <img
-                        src={acf?.stages?.stage_3?.image?.localFile?.publicURL}
+                        src={
+                          acf?.stages?.stage_2?.preview_1?.localFile?.publicURL
+                        }
+                        alt=""
+                      />
+                    </div>
+                    <div className="delevar__single--img delevari--mid">
+                      <img
+                        src={
+                          acf?.stages?.stage_2?.preview_2?.localFile?.publicURL
+                        }
+                        alt=""
+                      />
+                    </div>
+                    <div className="delevar__single--img delevari--lft">
+                      <img
+                        src={
+                          acf?.stages?.stage_2?.preview_3?.localFile?.publicURL
+                        }
                         alt=""
                       />
                     </div>
                   </div>
-                  <div className="business__ri">
-                    <div className="business__ct">
-                      <h4>{acf?.stages?.stage_3?.heading}</h4>
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: acf?.stages?.stage_3?.description,
-                        }}
-                      />
-                    </div>
+                  <div
+                    className="delevary__mobil"
+                    data-aos="zoom-in"
+                    data-aos-delay="50"
+                    data-aos-duration="2000"
+                  >
+                    <img
+                      src={
+                        acf?.stages?.stage_2?.preview_mobile?.localFile
+                          ?.publicURL
+                      }
+                      alt=""
+                    />
                   </div>
                 </div>
-                <div className="footer---top-tx">
-                  <h4>You can count on us. You can count on DevPixel.</h4>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="control__wrap">
+                  <div className="business__fx">
+                    <div className="business__lf">
+                      <div
+                        className="business--img"
+                        data-aos="zoom-in"
+                        data-aos-delay="50"
+                        data-aos-duration="2000"
+                      >
+                        <img
+                          src={
+                            acf?.stages?.stage_3?.image?.localFile?.publicURL
+                          }
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div className="business__ri">
+                      <div
+                        className="business__ct"
+                        data-aos="fade-up"
+                        data-aos-delay="50"
+                        data-aos-duration="3000"
+                      >
+                        <h4>{acf?.stages?.stage_3?.heading}</h4>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: acf?.stages?.stage_3?.description,
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="footer---top-tx">
+                    <h4>You can count on us. You can count on DevPixel.</h4>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <footer className="fancy-footer"></footer>
-      <FooterFormContact />
+        <footer className="fancy-footer"></footer>
+        <FooterFormContact />
+      </div>
     </>
   )
 }

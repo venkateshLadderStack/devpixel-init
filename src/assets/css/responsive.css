@@ -6,11 +6,11 @@
   .brand__aera {
     padding-top: 50px;
     padding-bottom: 90px;
-    /* margin-top: 112vh; */
+    margin-top: 112vh;
   }
 
   .hero__area {
-    height: 100%;
+    height: 106vh;
     font-family: "Poppins", sans-serif;
   }
   .above__area {
@@ -32,9 +32,9 @@
 
 /* XL Device :1200px. */
 @media (min-width: 3839px) and (max-width: 6000px) {
-  /* .brand__aera {
+  .brand__aera {
     margin-top: 100vh;
-  } */
+  }
 
   .hero-bg-b {
     top: -40%;
@@ -54,14 +54,14 @@
 /* XL Device :1200px. */
 @media (min-width: 2047px) and (max-width: 3839px) {
   .hero__area {
-    height: 100%;
+    height: 50vh;
   }
 }
 
 /* XL Device :1200px. */
 @media (min-width: 1200px) and (max-width: 1449px) {
   .hero__area {
-    height: 100%;
+    height: 788px;
     padding-top: 150px;
   }
 
@@ -105,10 +105,10 @@
     z-index: 99999;
     font-family: "Poppins" sans-serif;
   }
-  /* 
+
   .brand__aera {
     margin-top: 778px;
-  } */
+  }
 
   .hero-bg-b {
     top: -10%;
@@ -116,9 +116,9 @@
 }
 /* XL Device :1200px. */
 @media (min-width: 3839px) and (max-width: 6000px) {
-  /* .brand__aera {
+  .brand__aera {
     margin-top: 100vh;
-  } */
+  }
 
   .hero-bg-b {
     top: -40%;
@@ -138,13 +138,13 @@
 /* XL Device :1200px. */
 @media (min-width: 2047px) and (max-width: 3839px) {
   .hero__area {
-    height: 100%;
+    height: 100vh;
   }
 }
 /* LG Device :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
   .hero__area {
-    height: 100%;
+    height: 611px;
     padding-top: 150px;
   }
 
@@ -152,9 +152,9 @@
     top: -9%;
   }
 
-  /* .brand__aera {
+  .brand__aera {
     margin-top: 611px;
-  } */
+  }
 
   .brand__title h4 {
     font-size: 30px;
@@ -306,9 +306,9 @@
     padding-top: 110px;
   }
 
-  /* .brand__aera {
+  .brand__aera {
     margin-top: 533px;
-  } */
+  }
 
   .hero-bg-b {
     top: -7%;

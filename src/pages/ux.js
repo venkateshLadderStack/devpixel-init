@@ -206,7 +206,7 @@ const UX = props => {
           </div>
         </div>
       </section>
-      <section className="ux4 my-100">
+      <section className="ux4 my-100 bg-light">
         <div className="wrap">
           <div className="row">
             <div className="col-12 col-md-9 text-center slide">

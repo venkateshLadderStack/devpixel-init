@@ -6,6 +6,11 @@ const Brand = ({ acf }) => {
   return (
     <>
       <div className="brand__aera">
+        <img
+          src={acf?.hero?.background_image_2?.localFile?.publicURL}
+          alt=""
+          className="hero-bg-b"
+        />
         <div className="container">
           <div className="row">
             <div className="col-lg-12">

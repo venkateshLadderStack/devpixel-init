@@ -20,7 +20,12 @@ const Hero = ({ hero }) => {
           <div className="row">
             <div className="col-lg-12">
               <div className="hero__wrap">
-                <div className="hero__content">
+                <div
+                  className="hero__content"
+                  data-aos="fade-up"
+                  data-aos-delay="50"
+                  data-aos-duration="1000"
+                >
                   <a href="#">{hero?.sub_heading}</a>
                   <h4>{hero?.heading}</h4>
                   <p dangerouslySetInnerHTML={{ __html: hero?.description }} />

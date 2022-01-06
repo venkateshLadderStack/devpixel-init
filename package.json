@@ -6,7 +6,7 @@
   "author": "Rishabh Aggarwal rishabhaggarwal2003@gmail.com",
   "dependencies": {
     "@popperjs/core": "^2.5.3",
-    "aos": "2.1",
+    "aos": "^2.3.4",
     "babel-plugin-styled-components": "^1.12.0",
     "basicscroll": "^3.0.3",
     "bootstrap": "^4.5.3",
