@@ -53,6 +53,7 @@ const About = props => {
                 <h2 className="text-white mb-4 twoguy">{aboutPageHeading}</h2>
 
                 <div
+                  className="twoguy_text"
                   dangerouslySetInnerHTML={{ __html: aboutPageSubHeading }}
                 />
               </div>
@@ -64,7 +65,7 @@ const About = props => {
             </div>
           </div>
         </section>
-        <section className="my-100">
+        <section className="py-100 bg-white">
           <div className="wrap">
             <div className="row">
               <div className="col-12 col-md-6 life">

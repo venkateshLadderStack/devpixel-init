@@ -4021,3 +4021,15 @@ ul.lineflow li.linebyline .period .whato ul li .low img {
 /* SM Small Device :550px. */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
 }
+
+.bg-white {
+  background-color: white;
+}
+
+.py-100 {
+  padding: 100px 0px;
+}
+
+.twoguy_text {
+  font-family: SourceSansPro-Regular, sans-serif;
+}

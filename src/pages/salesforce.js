@@ -61,7 +61,7 @@ const Salesforce = props => {
           </div>
         </section>
       </section>
-      <section className="my-100 saleforce3 pt-5">
+      <section className="py-100 bg-white saleforce3">
         <div className="wrap">
           <div className="row">
             <div className="col-12 col-md-12 text-center">

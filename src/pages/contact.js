@@ -74,7 +74,7 @@ const Contact = props => {
           </div>
         </div>
       </div>
-      {/* <section className="pt-5 cont2">
+      <section className="py-5 bg-white">
         <div className="wrap">
           <div className="row">
             <div className="col-12 col-md-6">
@@ -93,8 +93,8 @@ const Contact = props => {
             </div>
           </div>
         </div>
-      </section> */}
-      <section className="my-100 cont1">
+      </section>
+      <section className="py-100 bg-white">
         <div className="wrap">
           <div className="row">
             <div className="col-12">
@@ -104,23 +104,32 @@ const Contact = props => {
 
           <div className="row">
             <div className="col-12 col-md-4">
-              <img src={contactEmailIcon} alt="email" className="mb-4" />
-              <div dangerouslySetInnerHTML={{ __html: contactEmailText }} />
+              <img src={contactEmailIcon} alt="email" className="mb-4 " />
+              <div
+                className="text-dark"
+                dangerouslySetInnerHTML={{ __html: contactEmailText }}
+              />
             </div>
 
             <div className="col-12 offset-md-1 col-md-3">
               <img src={contactTelephoneIcon} alt="email" className="mb-4" />
-              <div dangerouslySetInnerHTML={{ __html: contactTelephoneText }} />
+              <div
+                className="text-dark"
+                dangerouslySetInnerHTML={{ __html: contactTelephoneText }}
+              />
             </div>
 
             <div className="col-12 offset-md-1 col-md-3">
               <img src={contactLocationIcon} alt="email" className="mb-4" />
-              <div dangerouslySetInnerHTML={{ __html: contactLocationText }} />
+              <div
+                className="text-dark"
+                dangerouslySetInnerHTML={{ __html: contactLocationText }}
+              />
             </div>
           </div>
         </div>
       </section>
-      <section className="contact-area">
+      <section className="contact-area bg-white">
         <div className="wrap">
           <div className="row">
             <div className="col-lg-12">
