@@ -2393,6 +2393,7 @@ h3.force {
   padding: 0 0 60px;
   text-align: center;
   background: #131f27;
+  margin-top: -1px;
 }
 .new-f {
   margin: 0 auto;
@@ -3614,6 +3615,7 @@ ul.lineflow li.linebyline .period .whato ul li .low img {
   }
   .fancy-footer {
     min-height: 180px;
+    margin-top: -1px;
   }
   ul.lineflow li.linebyline .period .what2 ul.thumb li .low {
     height: 80px;

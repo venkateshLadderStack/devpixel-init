@@ -2,128 +2,122 @@
 
 .keyart,
 .keyart_layer {
-	height: 1000px;
+  height: 1000px;
 }
 
 #parallax {
-	display: none;
+  display: none;
 }
 
 #nonparallax {
-	display: block;
+  display: block;
 }
 
 #nonparallax {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto 74%;
-    background-color: #d2eaf6;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 74%;
+  background-color: #d2eaf6;
 }
 
 .keyart {
-	position: relative;
-	z-index: 10;
+  position: relative;
+  z-index: 10;
 }
 
 .keyart_layer {
-	background-position: bottom center;
-	background-size: auto 1038px;
-	background-repeat: repeat-x;
-	width: 100%;
-	position: absolute;
+  background-position: bottom center;
+  background-size: auto 1038px;
+  background-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
 }
 
 .keyart_layer.parallax {
-	position: fixed;
+  position: fixed;
 }
 
 #maincontain {
-	
-	position: relative;
-	z-index: 98;
+  position: relative;
+  z-index: 98;
+  margin-top: -1px;
 }
 
-
 /********************/
 
-
 /********************/
-
 
 /* ENABLES PARALLAX */
 
-
 /********************/
-
 
 /********************/
 
 @media (min-width: 601px) {
-	#nonparallax {
-		display: none;
-	}
-	#parallax {
-		display: block;
-	}
+  #nonparallax {
+    display: none;
+  }
+  #parallax {
+    display: block;
+  }
 }
 
-
 /*********************/
 
-
 /*********************/
-
 
 /* DISABLES PARALLAX */
 
-
 /*********************/
-
 
 /*********************/
 
 @media (max-width: 600px) {
-	#nonparallax {
-		display: block;
-	}
-	#parallax {
-		display: none;
-	}
+  #nonparallax {
+    display: block;
+  }
+  #parallax {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
-	#nonparallax {}
+  #nonparallax {
+  }
 }
 
 @media (max-width: 460px) {
-	#nonparallax {}
+  #nonparallax {
+  }
 }
 
 @media (max-width: 400px) {
-	.keyart,
-	.keyart_layer {
-		height: 380px !important;
-	}
-	#nonparallax {}
+  .keyart,
+  .keyart_layer {
+    height: 380px !important;
+  }
+  #nonparallax {
+  }
 }
 
 @media (max-width: 340px) {
-	#nonparallax {}
+  #nonparallax {
+  }
 }
 
 @media only screen and (max-device-width: 450px) {
-	#nonparallax {
-		background-position: top;
-		background-repeat: no-repeat;
-		background-size: 100%;
-	}
-	/* PARALLAX */
-	.keyart,
-	.keyart_layer {
-		height: 414px;
-	}
-	.keyart_layer {
-		position: absolute;
-		background-size: auto 600px;
-	}
+  #nonparallax {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  /* PARALLAX */
+  .keyart,
+  .keyart_layer {
+    height: 414px;
+  }
+  .keyart_layer {
+    position: absolute;
+    background-size: auto 600px;
+  }
 }

@@ -1003,7 +1003,8 @@
   .above--res--bg {
     position: absolute;
     bottom: -87px;
-    left: -2px;
+    left: -3px;
+    right: -3px;
   }
 
   .business--area {
