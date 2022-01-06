@@ -17,6 +17,7 @@ import TestimonialBox from "../components/TestimonialBox"
 import BackToTopItem from "../components/BackTopTop"
 import Brand from "../components/Home/Brand"
 import Communication from "../components/Home/Communication"
+import Navbar from "../components/Navbar"
 
 const CompanyLogoHeader = styled.h2`
   font-size: 16px !important;
@@ -235,8 +236,7 @@ const Home = props => {
           }
         />
       </Helmet>
-      <MobileHeader transparent name="transparent" />
-      <PageNavBar headerClass="mainpageheader vhead topmenu" />
+      <Navbar />
       <section className="effect">
         <Parallax
           className="module parallax"

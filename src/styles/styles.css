@@ -3368,7 +3368,7 @@ ul.lineflow li.linebyline .period .whato ul li .low img {
 }
 @media (max-width: 500px) {
   section.module.parallax {
-    height: 90vh !important;
+    height: 100vh !important;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: initial;
