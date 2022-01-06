@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import Bars from "../assets/img/bar.svg"
 import useWindowSize from "../../hooks/useWindowSize"
 import { graphql, Link, useStaticQuery } from "gatsby"
-import Logo from "../assets/img/header--logo.svg"
+import Logo from "../assets/img/logo-1.svg"
 
 const Newheader = () => {
   const [mobNav, setMobNav] = useState(false)
@@ -13,6 +13,9 @@ const Newheader = () => {
       <div class={`offcanva ${mobNav && "active"}`}>
         <div class={`offcanva__menu`}>
           <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
             <li>
               <Link to="/about">Company</Link>
             </li>
@@ -38,9 +41,9 @@ const Newheader = () => {
                 <div className="header__fx">
                   <div className="header__lf">
                     <div className="header__logo">
-                      <a href="#">
-                        <img src={Logo} alt="" />
-                      </a>
+                      <Link to="/">
+                        <img src={Logo} alt="" className="logo_style" />
+                      </Link>
                     </div>
                     <div className="header__menu">
                       <ul>

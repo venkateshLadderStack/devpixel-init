@@ -14,6 +14,7 @@ import PrevArrow from "../images/prev.svg"
 import NextArrow from "../images/next.svg"
 
 import styled from "styled-components"
+import Newheader from "../components/Navbar"
 
 const Heading = styled.h2`
   @media (max-width: 500px) {
@@ -108,8 +109,7 @@ const UX = props => {
           }
         />
       </Helmet>
-      <MobileHeader name="rmenuux" />
-      <PageNavBar headerClass="ux-strategy" />
+      <Newheader />
       <div id="home-banner" className="ux-head"></div>
       <section className="ux-full">
         <section className="ux1 pt-150">

@@ -7,6 +7,7 @@ import SalesForcePageBox from "../components/SalesForcePageBox"
 import { graphql } from "gatsby"
 
 import styled from "styled-components"
+import Newheader from "../components/Navbar"
 
 const Heading = styled.h2`
   @media (max-width: 500px) {
@@ -40,8 +41,7 @@ const Salesforce = props => {
           }
         />
       </Helmet>
-      <MobileHeader name="rmenusaleforce" />
-      <PageNavBar headerClass="salesforce-head" />
+      <Newheader />
       <div id="home-banner" className="salesforce-bg"></div>
       <section className="saleforce-full">
         <section className="ux1 pt-5 saleforce1">

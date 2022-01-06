@@ -755,3 +755,8 @@ focus {
   width: 100vw;
   object-fit: cover;
 }
+
+.logo_style {
+  width: 160px;
+  object-fit: contain;
+}
