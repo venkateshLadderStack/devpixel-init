@@ -133,7 +133,6 @@ const Newheader = ({ bg, home }) => {
                           <Link
                             to="/about"
                             activeStyle={{
-                              paddingBottom: "3px",
                               borderBottom: "3px solid #1f3e53",
                             }}
                           >
@@ -144,7 +143,6 @@ const Newheader = ({ bg, home }) => {
                           <Link
                             to="/salesforce"
                             activeStyle={{
-                              paddingBottom: "3px",
                               borderBottom: "3px solid #1f3e53",
                             }}
                           >
@@ -156,7 +154,6 @@ const Newheader = ({ bg, home }) => {
                             to="/ux"
                             className="nav_-link"
                             activeStyle={{
-                              paddingBottom: "3px",
                               borderBottom: "3px solid #1f3e53",
                             }}
                           >

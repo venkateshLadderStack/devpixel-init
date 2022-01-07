@@ -528,6 +528,16 @@ export const HomeQuery = graphql`
             source_url
             localFile {
               publicURL
+              childImageSharp {
+                fluid(
+                  quality: 90
+                  webpQuality: 90
+                  jpegQuality: 90
+                  pngQuality: 90
+                ) {
+                  src
+                }
+              }
             }
           }
           background_image_2 {

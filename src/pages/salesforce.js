@@ -79,7 +79,7 @@ const Salesforce = props => {
           </div>
         </div>
       </section>
-      <section class="start-area">
+      {/* <section class="start-area">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
@@ -110,7 +110,7 @@ const Salesforce = props => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <PageFooter />
     </>
   )

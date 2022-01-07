@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import useWindowSize from "../../../hooks/useWindowSize"
+import Logo from "../../assets/img/banner-main.jpg"
 
 const Hero = ({ acf }) => {
   const { width } = useWindowSize()
@@ -12,12 +13,12 @@ const Hero = ({ acf }) => {
         style={{
           backgroundImage: `url(${
             width > 768
-              ? acf?.hero?.background_image_main?.localFile?.publicURL
+              ? Logo
               : acf?.hero?.mobile_background_image?.localFile?.publicURL
           })`,
         }}
       >
-        <div className="container">
+        {/* <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="hero__wrap">
@@ -36,11 +37,8 @@ const Hero = ({ acf }) => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
-      <MobileBottomImage>
-        <img src={acf?.hero?.background_image_2?.localFile?.publicURL} alt="" />
-      </MobileBottomImage>
     </>
   )
 }

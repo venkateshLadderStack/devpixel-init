@@ -111,17 +111,18 @@ ul {
   margin-right: 0;
 }
 .header__menu ul li a {
-  font-size: 16px;
+  font-size: 14px;
   color: #333333;
   text-decoration: none;
+  margin-bottom: -4px;
+}
+
+.header__menu ul li a:active {
+  border-bottom: 3px solid #1f3e53;
 }
 
 .header__menu ul li a:hover {
-  font-size: 16px;
-  color: #333333;
-  text-decoration: none;
   border-bottom: 3px solid #1f3e53;
-  padding-bottom: 3px;
 }
 
 .headr__icn a {
@@ -228,7 +229,7 @@ a {
   padding-bottom: 90px;
   background: #153243;
   position: relative;
-  margin-top: 1050px;
+  margin-top: 890px;
   font-family: "Poppins", sans-serif;
 }
 .hero-bg-b {
@@ -380,7 +381,7 @@ a {
 }
 .above__content h4:before {
   position: absolute;
-  width: 319px;
+  width: 289px;
   height: 4px;
   background: #000000;
   content: "";
@@ -777,7 +778,7 @@ focus {
 }
 
 .logo_style {
-  width: 144px;
+  width: 201px;
   object-fit: contain;
 }
 

@@ -889,7 +889,7 @@
 
   .hero__area.hero__mobile {
     display: block;
-    height: 100vh;
+    height: 108vh;
     background-size: cover;
     background-position: center;
     padding-top: 120px;
@@ -978,7 +978,7 @@
 
   .above__content h4::before {
     position: absolute;
-    width: 66%;
+    width: 56%;
     height: 4px;
     background: #f5c113;
   }

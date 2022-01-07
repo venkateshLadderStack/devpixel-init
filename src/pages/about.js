@@ -109,7 +109,7 @@ const About = props => {
           </div>
         </section>
       </section>
-      <div className="team-area">
+      {/* <div className="team-area">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -131,7 +131,7 @@ const About = props => {
             })}
           </div>
         </div>
-      </div>
+      </div> */}
       <PageFooter />
     </div>
   )
