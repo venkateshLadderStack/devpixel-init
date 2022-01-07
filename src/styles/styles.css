@@ -413,6 +413,17 @@ h2.twoguy {
   padding: 0;
   background-color: #1e3f53;
 }
+
+.fancy-footer h4 {
+  font-size: 30px;
+  color: #e2b313;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  left: 20%;
+  top: 59px;
+}
+
 #contact-us-form {
   padding: 0 20px;
 }
@@ -728,6 +739,12 @@ ul.lineflow li.linebyline .left-do2 .why p .mt-100 {
     min-height: 1100px;
     padding: 80px 0;
   }
+
+  .fancy-footer h4 {
+    left: 40%;
+    top: 59px;
+  }
+
   .footer-text {
     right: 20%;
     top: 650px;
@@ -3053,6 +3070,10 @@ ul.lineflow li.linebyline .period .whato ul li .low img {
   }
 }
 @media (max-width: 767px) {
+  .fancy-footer h4 {
+    display: none;
+  }
+
   .uxsidenav {
     max-width: 100%;
     text-align: center;

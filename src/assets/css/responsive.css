@@ -219,6 +219,7 @@
   .hero__content {
     max-width: 485px;
     margin-left: 100px;
+    font-family: "Poppins", sans-serif;
   }
 
   .brand__wrap {

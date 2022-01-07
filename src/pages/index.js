@@ -485,9 +485,14 @@ const Home = props => {
             </div>
           </div>
         </div>
-        <footer className="fancy-footer"></footer>
+        <footer className="fancy-footer">
+          <h4>
+            You can count on us. <br /> You can count on DevPixel.
+          </h4>
+        </footer>
         <FooterFormContact />
       </div>
+      <BackToTopItem />
     </>
   )
 }
