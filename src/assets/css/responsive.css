@@ -891,7 +891,7 @@
     display: block;
     height: 108vh;
     background-size: cover;
-    background-position: center;
+    background-position: 54%;
     padding-top: 120px;
     position: unset;
   }
