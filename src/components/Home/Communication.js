@@ -20,12 +20,12 @@ const Communication = ({ communication }) => {
             data-aos="fade-up"
             data-aos-delay="50"
             data-aos-duration="3000"
-          >
-            <img
-              src={communication?.background_image_mobile?.localFile?.publicURL}
-              alt=""
-            />
-          </div>
+            style={{
+              backgroundImage: `url(${communication?.background_image_mobile?.localFile?.publicURL})`,
+              backgroundPosition: "-8px 113%",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
         )}
 
         <div className="container">
