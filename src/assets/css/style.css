@@ -91,13 +91,18 @@ ul {
   font-family: "Poppins", sans-serif;
 }
 .header__area {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
   font-family: "Poppins", sans-serif;
 }
+
+.header__bg {
+  background: #eaeaea;
+}
+
 .header__menu ul li {
   display: inline-block;
   margin-right: 30px;
@@ -110,6 +115,15 @@ ul {
   color: #333333;
   text-decoration: none;
 }
+
+.header__menu ul li a:hover {
+  font-size: 16px;
+  color: #333333;
+  text-decoration: none;
+  border-bottom: 3px solid #1f3e53;
+  padding-bottom: 3px;
+}
+
 .headr__icn a {
   width: 38px;
   height: 38px;
@@ -169,8 +183,15 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 0;
+  padding: 20px 0;
 }
+
+@media screen and (max-width: 767px) {
+  .header__fx {
+    padding: 25px 0;
+  }
+}
+
 .hero__content {
   max-width: 485px;
   margin-left: 236px;
@@ -756,6 +777,17 @@ focus {
 }
 
 .logo_style {
-  width: 201px;
+  width: 144px;
   object-fit: contain;
+}
+
+@media screen and (max-width: 767px) {
+  .logo_style {
+    width: 155px;
+    object-fit: contain;
+  }
+}
+
+.nav_-link {
+  color: yellow;
 }

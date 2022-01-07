@@ -240,7 +240,7 @@ const Home = props => {
           }
         />
       </Helmet>
-      <Navbar />
+      <Navbar home={true} />
       <Hero acf={acf} />
       <div id="maincontain" style={{ backgroundColor: "#1e3f53" }}>
         <Brand acf={acf} />

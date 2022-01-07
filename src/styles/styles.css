@@ -2991,7 +2991,7 @@ ul.lineflow li.linebyline .period .whato ul li .low img {
     background-position: bottom;
   }
   .salesforce-bg {
-    min-height: 300px;
+    min-height: 198px;
     background: url(./img/ux/sf-banner-mobile.svg) #c7dff0;
     background-repeat: no-repeat;
     background-size: 100%;

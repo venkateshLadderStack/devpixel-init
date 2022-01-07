@@ -9,7 +9,7 @@ import { Img } from "gatsby-image"
 
 import styled from "styled-components"
 import JobCard from "../components/JobCard"
-import Newheader from "../components/Navbar"
+import Navbar from "../components/Navbar"
 
 const Heading = styled.h1`
   @media (max-width: 500px) {
@@ -57,7 +57,7 @@ const Contact = props => {
           }
         />
       </Helmet>
-      <Newheader />
+      <Navbar bg="#eaeaea" />
       <div id="home-banner" className="contact-bg">
         <div className="wrap">
           <div className="row align-items-center">

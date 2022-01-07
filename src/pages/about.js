@@ -7,7 +7,7 @@ import PageNavBar from "../components/PageNavBar"
 import { graphql } from "gatsby"
 import AboutList from "../components/AboutList"
 import TeamCard from "../components/TeamCard"
-import Newheader from "../components/Navbar"
+import Navbar from "../components/Navbar"
 
 const About = props => {
   const aboutPage = props.data.allWordpressPage.edges[0].node.acf
@@ -36,7 +36,7 @@ const About = props => {
           }
         />
       </Helmet>
-      <Newheader />
+      <Navbar bg={"#eaeaea"} />
       <div id="home-banner" className="company-bg"></div>
       <section className="newdev">
         <div id="two-guys" className="wrap">

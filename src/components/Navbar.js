@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react"
 import Bars from "../assets/img/bar.svg"
 import useWindowSize from "../../hooks/useWindowSize"
 import { graphql, Link, useStaticQuery } from "gatsby"
+import styled from "styled-components"
 
-const Newheader = () => {
+const Newheader = ({ bg, home }) => {
   const [mobNav, setMobNav] = useState(false)
-  const { width } = useWindowSize()
 
   const data = useStaticQuery(graphql`
     {
@@ -69,7 +69,7 @@ const Newheader = () => {
                 activeStyle={{
                   color: "#ffb11c",
                 }}
-                to="ux"
+                to="/ux"
               >
                 UX Strategy
               </Link>
@@ -81,7 +81,7 @@ const Newheader = () => {
                 }}
                 to="/contact"
               >
-                Approach
+                Contact Us
               </Link>
             </li>
             <li>
@@ -100,15 +100,15 @@ const Newheader = () => {
                 Linkedin
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="#">Dribbble</a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
       <div className={`overlay ${mobNav && "active"}`}></div>
 
-      <div className="header__area">
+      <HeaderWrapper className="header__area" bg={bg} home={home}>
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -130,17 +130,42 @@ const Newheader = () => {
                     <div className="header__menu">
                       <ul>
                         <li>
-                          <Link to="/about">Company</Link>
+                          <Link
+                            to="/about"
+                            activeStyle={{
+                              paddingBottom: "3px",
+                              borderBottom: "3px solid #1f3e53",
+                            }}
+                          >
+                            Company
+                          </Link>
                         </li>
                         <li>
-                          <Link to="/salesforce">Salesforce</Link>
+                          <Link
+                            to="/salesforce"
+                            activeStyle={{
+                              paddingBottom: "3px",
+                              borderBottom: "3px solid #1f3e53",
+                            }}
+                          >
+                            Salesforce
+                          </Link>
                         </li>
                         <li>
-                          <Link to="/ux">UX Strategy</Link>
+                          <Link
+                            to="/ux"
+                            className="nav_-link"
+                            activeStyle={{
+                              paddingBottom: "3px",
+                              borderBottom: "3px solid #1f3e53",
+                            }}
+                          >
+                            UX Strategy
+                          </Link>
                         </li>
-                        <li>
+                        {/* <li>
                           <Link to="/contact">Approach</Link>
-                        </li>
+                        </li> */}
                       </ul>
                     </div>
                   </div>
@@ -152,9 +177,9 @@ const Newheader = () => {
                       <a href="https://www.linkedin.com/company/wearedevpixel/">
                         <i className="fab fa-linkedin-in"></i>
                       </a>
-                      <a href="#">
+                      {/* <a href="#">
                         <i className="fas fa-basketball-ball"></i>
-                      </a>
+                      </a> */}
                     </div>
                     <div className="header__btn">
                       <Link to="/contact">Contact Us</Link>
@@ -181,9 +206,18 @@ const Newheader = () => {
             </div>
           </div>
         </div>
-      </div>
+      </HeaderWrapper>
     </>
   )
 }
+
+const HeaderWrapper = styled.div`
+  position: ${props => (props.home ? "absolute" : "unset")};
+  background-color: ${props => props.bg || "transparent"};
+
+  @media screen and (max-width: 767px) {
+    height: 56px;
+  }
+`
 
 export default Newheader
