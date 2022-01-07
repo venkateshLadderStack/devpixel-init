@@ -792,3 +792,8 @@ focus {
 .nav_-link {
   color: yellow;
 }
+
+.bg--sze {
+  background-position: -8px 113%;
+  background-repeat: no-repeat;
+}

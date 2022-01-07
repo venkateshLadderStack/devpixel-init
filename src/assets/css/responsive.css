@@ -999,7 +999,9 @@
     padding-bottom: 130px;
     height: auto;
     position: relative;
-    min-height: 650px;
+    min-height: 690px;
+    background-position: -8px 113%;
+    background-repeat: no-repeat;
   }
 
   .above--res--bg {

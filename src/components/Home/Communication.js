@@ -10,27 +10,12 @@ const Communication = ({ communication }) => {
         className={`above__area ${width < 767 && "avobe--aera--res"}`}
         style={{
           backgroundImage: `url(${
-            width > 767 && communication?.background_image?.localFile?.publicURL
+            (width > 767 &&
+              communication?.background_image?.localFile?.publicURL) ||
+            communication?.background_image_mobile?.localFile?.publicURL
           })`,
         }}
       >
-        {width < 767 && (
-          <div
-            className="above--res--bg"
-            data-aos="fade-up"
-            data-aos-delay="50"
-            data-aos-duration="3000"
-          >
-            <div
-              style={{
-                backgroundImage: `url(${communication?.background_image_mobile?.localFile?.publicURL})`,
-                backgroundPosition: "-8px 113%",
-                backgroundRepeat: "no-repeat",
-              }}
-            />
-          </div>
-        )}
-
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
