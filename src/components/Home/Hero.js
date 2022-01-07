@@ -13,7 +13,7 @@ const Hero = ({ acf }) => {
         style={{
           backgroundImage: `url(${
             width > 768
-              ? Logo
+              ? acf?.hero?.background_image_main?.localFile?.publicURL
               : acf?.hero?.mobile_background_image?.localFile?.publicURL
           })`,
         }}
