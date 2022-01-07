@@ -14,7 +14,8 @@ const Hero = ({ acf }) => {
           backgroundImage: `url(${
             (width > 768 &&
               acf?.hero?.background_image_main?.localFile?.publicURL) ||
-            acf?.hero?.mobile_background_image?.localFile?.publicURL
+            (width < 768 &&
+              acf?.hero?.mobile_background_image?.localFile?.publicURL)
           })`,
         }}
       >
