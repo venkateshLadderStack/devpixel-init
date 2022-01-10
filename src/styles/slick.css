@@ -34,8 +34,7 @@
   outline: 0;
 }
 
-/* .button__bar li button:hover,
+.button__bar li button:hover,
 .button__bar li button:focus {
-  background: #131f27;
   outline: 0;
-} */
+}
