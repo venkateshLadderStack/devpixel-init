@@ -32,11 +32,11 @@
   background-color: rgb(8, 255, 140);
 }
 
-.button__bar li button:hover,
+/* .button__bar li button:hover,
 .button__bar li button:focus {
   background: rgba(247, 34, 34, 0.8);
   outline: 0;
-}
+} */
 
 .slick-slide img {
   border: 5px solid #fff;
