@@ -13,14 +13,14 @@ const AboutListHeading = styled.h3`
 const AboutList = props => {
   return (
     <div className="row align-items-center mb-4">
-      <div
-        className={`col-3 text-center big-number ${props.list.color_option}`}
-      >
+      <div className={`col-3 text-center big-number ${props.list.colorOption}`}>
         {props.list.number}
       </div>
       <div className="col-9">
-        <AboutListHeading className="text-white force">{props.list.heading}</AboutListHeading>
-        <p className="text-white mb-3">{props.list.sub_heading}</p>
+        <AboutListHeading className="text-white force">
+          {props.list.heading}
+        </AboutListHeading>
+        <p className="text-white mb-3">{props.list.subHeading}</p>
       </div>
     </div>
   )

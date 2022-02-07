@@ -5,14 +5,8 @@ import $ from "jquery"
 import "aos/dist/aos.css"
 import { TimelineMax, TweenMax, Linear, Power1, gsap } from "gsap/all"
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap"
-import styled from "styled-components"
 
-import MobileHeader from "../components/MobileHeader"
-import PageNavBar from "../components/PageNavBar"
-import Promo from "../components/Promo"
-import SmallPromo from "../components/SmallPromo"
 import FooterFormContact from "../components/FooterContactForm"
-import TestimonialBox from "../components/TestimonialBox"
 
 import BackToTopItem from "../components/BackTopTop"
 import Brand from "../components/Home/Brand"
@@ -20,42 +14,9 @@ import Communication from "../components/Home/Communication"
 import Navbar from "../components/Navbar"
 import Hero from "../components/Home/Hero"
 
-const CompanyLogoHeader = styled.h2`
-  font-size: 16px !important;
-`
-
-const Parallax = styled.section`
-  width: 100%;
-  height: 100%;
-  background-image: url(${props => props.img});
-  background-size: cover;
-  margin-bottom: -1px;
-
-  @media (max-width: 500px) {
-    background-image: url(${props => props.mobileImg});
-  }
-`
-
-const BaseImage = styled.div`
-  @media (max-width: 500px) {
-    display: none;
-  }
-`
-
-const HeroText = styled.div`
-  background: transparent;
-  position: absolute;
-  top: 20vh;
-
-  @media (max-width: 500px) {
-    top: 10vh;
-  }
-`
-
 const Home = props => {
-  const { data } = props
-  const acf = props?.data?.wordpressPage?.acf
-  const homePageContent = props.data.allWordpressPage.nodes[0].acf
+  const homePageNew = props?.data?.wpPage?.homePageNew
+  const homePageContent = props?.data?.allWpPage?.nodes[0]?.homePageNew
 
   const pathPrepare = $el => {
     var lineLength = $el[0]?.getTotalLength()
@@ -231,21 +192,21 @@ const Home = props => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{homePageContent?.home_page_head?.meta_tag}</title>
-        <meta
+        <title>{homePageContent?.homePageHead?.metaTag}</title>
+        {/* <meta
           name="description"
           content={
-            props.data.allWordpressPage.nodes[0].yoast_json_ld[0]
-              .wordpress__graph[1].description
+            props?.data?.allWpPage?.nodes[0]?.yoast_json_ld[0]
+              ?.wordpress__graph[1]?.description
           }
-        />
+        /> */}
       </Helmet>
       <Navbar home={true} />
-      <Hero acf={acf} />
+      <Hero acf={homePageNew} />
       <div id="maincontain" style={{ backgroundColor: "#1e3f53" }}>
-        <Brand acf={acf} />
+        <Brand acf={homePageNew} />
 
-        <Communication communication={acf?.communication} />
+        <Communication communication={homePageNew?.communication} />
         <div className="business--area p-20">
           <div className="container">
             <div className="row">
@@ -261,7 +222,8 @@ const Home = props => {
                       >
                         <img
                           src={
-                            acf?.stages?.stage_1?.image?.localFile?.publicURL
+                            homePageNew?.stages?.stage1?.image?.localFile
+                              ?.publicURL
                           }
                           alt=""
                         />
@@ -274,10 +236,10 @@ const Home = props => {
                       data-aos-duration="3000"
                     >
                       <div className="business__ct">
-                        <h4>{acf?.stages?.stage_1?.heading}</h4>
+                        <h4>{homePageNew?.stages?.stage1?.heading}</h4>
                         <div
                           dangerouslySetInnerHTML={{
-                            __html: acf?.stages?.stage_1?.description,
+                            __html: homePageNew?.stages?.stage1?.description,
                           }}
                         />
                       </div>
@@ -301,7 +263,8 @@ const Home = props => {
                     >
                       <img
                         src={
-                          acf?.stages?.stage_1?.preview_1?.localFile?.publicURL
+                          homePageNew?.stages?.stage1?.preview1?.localFile
+                            ?.publicURL
                         }
                         alt=""
                       />
@@ -314,7 +277,8 @@ const Home = props => {
                     >
                       <img
                         src={
-                          acf?.stages?.stage_1?.preview_2?.localFile?.publicURL
+                          homePageNew?.stages?.stage1?.preview2?.localFile
+                            ?.publicURL
                         }
                         alt=""
                       />
@@ -327,7 +291,8 @@ const Home = props => {
                     >
                       <img
                         src={
-                          acf?.stages?.stage_1?.preview_3?.localFile?.publicURL
+                          homePageNew?.stages?.stage1?.preview3?.localFile
+                            ?.publicURL
                         }
                         alt=""
                       />
@@ -349,7 +314,8 @@ const Home = props => {
                       >
                         <img
                           src={
-                            acf?.stages?.stage_2?.image?.localFile?.publicURL
+                            homePageNew?.stages?.stage2?.image?.localFile
+                              ?.publicURL
                           }
                           alt=""
                         />
@@ -362,10 +328,10 @@ const Home = props => {
                       data-aos-duration="3000"
                     >
                       <div className="business__ct">
-                        <h4>{acf?.stages?.stage_2?.heading}</h4>
+                        <h4>{homePageNew?.stages?.stage2?.heading}</h4>
                         <div
                           dangerouslySetInnerHTML={{
-                            __html: acf?.stages?.stage_2?.description,
+                            __html: homePageNew?.stages?.stage2?.description,
                           }}
                         />
                       </div>
@@ -379,7 +345,8 @@ const Home = props => {
                       <div className="business--img">
                         <img
                           src={
-                            acf?.stages?.stage_2?.image?.localFile?.publicURL
+                            homePageNew?.stages?.stage2?.image?.localFile
+                              ?.publicURL
                           }
                           alt=""
                         />
@@ -403,7 +370,8 @@ const Home = props => {
                     <div className="delevar__single--img">
                       <img
                         src={
-                          acf?.stages?.stage_2?.preview_1?.localFile?.publicURL
+                          homePageNew?.stages?.stage2?.preview1?.localFile
+                            ?.publicURL
                         }
                         alt=""
                       />
@@ -411,7 +379,8 @@ const Home = props => {
                     <div className="delevar__single--img delevari--mid">
                       <img
                         src={
-                          acf?.stages?.stage_2?.preview_2?.localFile?.publicURL
+                          homePageNew?.stages?.stage2?.preview2?.localFile
+                            ?.publicURL
                         }
                         alt=""
                       />
@@ -419,7 +388,8 @@ const Home = props => {
                     <div className="delevar__single--img delevari--lft">
                       <img
                         src={
-                          acf?.stages?.stage_2?.preview_3?.localFile?.publicURL
+                          homePageNew?.stages?.stage2?.preview3?.localFile
+                            ?.publicURL
                         }
                         alt=""
                       />
@@ -433,7 +403,7 @@ const Home = props => {
                   >
                     <img
                       src={
-                        acf?.stages?.stage_2?.preview_mobile?.localFile
+                        homePageNew?.stages?.stage2?.previewMobile?.localFile
                           ?.publicURL
                       }
                       alt=""
@@ -455,7 +425,8 @@ const Home = props => {
                       >
                         <img
                           src={
-                            acf?.stages?.stage_3?.image?.localFile?.publicURL
+                            homePageNew?.stages?.stage3?.image?.localFile
+                              ?.publicURL
                           }
                           alt=""
                         />
@@ -468,10 +439,10 @@ const Home = props => {
                         data-aos-delay="50"
                         data-aos-duration="3000"
                       >
-                        <h4>{acf?.stages?.stage_3?.heading}</h4>
+                        <h4>{homePageNew?.stages?.stage3?.heading}</h4>
                         <div
                           dangerouslySetInnerHTML={{
-                            __html: acf?.stages?.stage_3?.description,
+                            __html: homePageNew?.stages?.stage3?.description,
                           }}
                         />
                       </div>
@@ -501,31 +472,89 @@ export default Home
 
 export const HomeQuery = graphql`
   query HomeQuery {
-    allWordpressPage(filter: { slug: { in: "home" } }) {
-      nodes {
-        yoast_json_ld {
-          wordpress__graph {
-            name
-            url
-            description
-          }
-        }
-        acf {
-          home_page_head {
+    wpPage(slug: { eq: "home-new" }) {
+      id
+      homePageNew {
+        stages {
+          stage1 {
             heading
-            meta_tag
+            description
+            image {
+              sourceUrl
+              localFile {
+                publicURL
+              }
+            }
+            preview1 {
+              sourceUrl
+              localFile {
+                publicURL
+              }
+            }
+            preview2 {
+              sourceUrl
+              localFile {
+                publicURL
+              }
+            }
+            preview3 {
+              sourceUrl
+              localFile {
+                publicURL
+              }
+            }
+          }
+          stage2 {
+            description
+            heading
+            image {
+              sourceUrl
+              localFile {
+                publicURL
+              }
+            }
+            preview1 {
+              sourceUrl
+              localFile {
+                publicURL
+              }
+            }
+            preview2 {
+              sourceUrl
+              localFile {
+                publicURL
+              }
+            }
+            preview3 {
+              sourceUrl
+              localFile {
+                publicURL
+              }
+            }
+            previewMobile {
+              sourceUrl
+              localFile {
+                publicURL
+              }
+            }
+          }
+          stage3 {
+            heading
+            description
+            image {
+              sourceUrl
+              localFile {
+                publicURL
+              }
+            }
           }
         }
-      }
-    }
-    wordpressPage(slug: { eq: "home-new" }) {
-      acf {
         hero {
-          sub_heading
-          heading
           description
-          background_image_main {
-            source_url
+          heading
+          subHeading
+          backgroundImage2 {
+            sourceUrl
             localFile {
               publicURL
               childImageSharp {
@@ -540,39 +569,60 @@ export const HomeQuery = graphql`
               }
             }
           }
-          background_image_2 {
-            source_url
+          backgroundImageMain {
+            sourceUrl
             localFile {
               publicURL
+              childImageSharp {
+                fluid(
+                  quality: 90
+                  webpQuality: 90
+                  jpegQuality: 90
+                  pngQuality: 90
+                ) {
+                  src
+                }
+              }
             }
           }
-          mobile_background_image {
-            source_url
+          mobileBackgroundImage {
+            sourceUrl
             localFile {
               publicURL
+              childImageSharp {
+                fluid(
+                  quality: 90
+                  webpQuality: 90
+                  jpegQuality: 90
+                  pngQuality: 90
+                ) {
+                  src
+                }
+              }
             }
           }
         }
         clients {
           heading
           clients {
-            client_image {
-              source_url
+            redirectUrl
+            fieldGroupName
+            clientImage {
+              sourceUrl
               localFile {
                 publicURL
               }
             }
-            redirect_url
           }
         }
         testimonials {
-          sub_heading
           heading
+          subHeading
           testimonial {
+            authorDetail
             quote
-            author_detail
             image {
-              source_url
+              sourceUrl
               localFile {
                 publicURL
               }
@@ -580,84 +630,31 @@ export const HomeQuery = graphql`
           }
         }
         communication {
-          sub_heading
+          description1
+          description2
+          fieldGroupName
           heading
-          description_1
-          description_2
-          background_image {
-            source_url
+          subHeading
+          backgroundImage {
+            sourceUrl
             localFile {
               publicURL
             }
           }
-          background_image_mobile {
-            source_url
+          backgroundImageMobile {
+            sourceUrl
             localFile {
               publicURL
             }
           }
         }
-        stages {
-          stage_1 {
-            heading
-            description
-            image {
-              localFile {
-                publicURL
-              }
-            }
-            preview_1 {
-              localFile {
-                publicURL
-              }
-            }
-            preview_2 {
-              localFile {
-                publicURL
-              }
-            }
-            preview_3 {
-              localFile {
-                publicURL
-              }
-            }
-          }
-          stage_3 {
-            heading
-            description
-            image {
-              localFile {
-                publicURL
-              }
-            }
-          }
-          stage_2 {
-            description
-            heading
-            image {
-              localFile {
-                publicURL
-              }
-            }
-            preview_1 {
-              localFile {
-                publicURL
-              }
-            }
-            preview_2 {
-              localFile {
-                publicURL
-              }
-            }
-            preview_3 {
-              localFile {
-                publicURL
-              }
-            }
-            preview_mobile {
-              localFile {
-                publicURL
-              }
+        footerHero {
+          fieldGroupName
+          heading
+          backgroundImage {
+            sourceUrl
+            localFile {
+              publicURL
             }
           }
         }

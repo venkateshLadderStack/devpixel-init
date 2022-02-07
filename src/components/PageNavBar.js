@@ -6,7 +6,6 @@ import linkedin from "../images/linked-icon.svg"
 import dribble from "../images/insta-icon.svg"
 
 const PageNavBar = props => {
-  const headerContent = props
   return (
     <header className={`trans-bg ${props.headerClass}`}>
       <div className="wrap">
@@ -16,13 +15,16 @@ const PageNavBar = props => {
               <StaticQuery
                 query={graphql`
                   query HeaderQuery {
-                    allWordpressAcfOptions {
+                    allWp {
                       nodes {
-                        options {
-                          header {
-                            localFile {
-                              name
-                              publicURL
+                        acfOptionsOptionsPage {
+                          optionsPage {
+                            header {
+                              sourceUrl
+                              localFile {
+                                name
+                                publicURL
+                              }
                             }
                           }
                         }
@@ -33,11 +35,11 @@ const PageNavBar = props => {
                 render={data => (
                   <img
                     src={
-                      data.allWordpressAcfOptions.nodes[0].options.header
-                        .localFile.publicURL
+                      data?.allWp?.nodes[0]?.acfOptionsOptionsPage?.optionsPage
+                        ?.header?.localFile?.publicURL
                     }
                     alt="DevPixel"
-                    className="logo"
+                    className="img-fluids logo"
                   />
                 )}
               />

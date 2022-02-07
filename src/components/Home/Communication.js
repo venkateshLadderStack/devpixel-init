@@ -11,8 +11,8 @@ const Communication = ({ communication }) => {
         style={{
           backgroundImage: `url(${
             (width > 767 &&
-              communication?.background_image?.localFile?.publicURL) ||
-            communication?.background_image_mobile?.localFile?.publicURL
+              communication?.backgroundImage?.localFile?.publicURL) ||
+            communication?.backgroundImage_mobile?.localFile?.publicURL
           })`,
         }}
       >
@@ -27,14 +27,14 @@ const Communication = ({ communication }) => {
                   data-aos-duration="3000"
                 >
                   <h4>
-                    {communication?.sub_heading}
+                    {communication?.subHeading}
                     <br />
                     <span>{communication?.heading}</span>
                   </h4>
                   <p>
-                    {communication?.description_1} <br />
+                    {communication?.description1} <br />
                     <br />
-                    <span>{communication?.description_2}</span>
+                    <span>{communication?.description2}</span>
                   </p>
                 </div>
               </div>

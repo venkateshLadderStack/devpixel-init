@@ -9,7 +9,7 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
   return graphql(`
     {
-      allWordpressWpJob {
+      allWpJob {
         edges {
           node {
             slug
@@ -26,7 +26,7 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const allPages = result.data.allWordpressWpJob.edges
+    const allPages = result?.data?.allWpJob?.edges
     const pages =
       process.env.NODE_ENV === "production"
         ? getOnlyPublished(allPages)

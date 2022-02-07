@@ -13,13 +13,15 @@ const MobileHeader = props => {
           <StaticQuery
             query={graphql`
               query MobileHeader {
-                allWordpressAcfOptions {
+                allWp {
                   nodes {
-                    options {
-                      header {
-                        localFile {
-                          name
-                          publicURL
+                    acfOptionsOptionsPage {
+                      optionsPage {
+                        header {
+                          localFile {
+                            name
+                            publicURL
+                          }
                         }
                       }
                     }
@@ -31,8 +33,8 @@ const MobileHeader = props => {
               <Link to="/">
                 <img
                   src={
-                    data.allWordpressAcfOptions.nodes[0].options.header
-                      .localFile.publicURL
+                    data?.allWp?.nodes[0]?.acfOptionsOptionsPage?.optionsPage
+                      ?.header?.localFile?.publicURL
                   }
                   alt="DevPixel"
                   className="img-fluids logo"
@@ -83,10 +85,20 @@ const MobileHeader = props => {
                 <hr />
               </li>
               <li>
-                <a href="https://www.facebook.com/wearedevpixel/" target="_blank">Facebook</a>
+                <a
+                  href="https://www.facebook.com/wearedevpixel/"
+                  target="_blank"
+                >
+                  Facebook
+                </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/company/wearedevpixel/" target="_blank">Linkedin</a>
+                <a
+                  href="https://www.linkedin.com/company/wearedevpixel/"
+                  target="_blank"
+                >
+                  Linkedin
+                </a>
               </li>
               {/* <li>
                 <a href="#">Dribbble</a>

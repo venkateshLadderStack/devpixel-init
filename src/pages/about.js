@@ -1,40 +1,38 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import MobileHeader from "../components/MobileHeader"
 
 import PageFooter from "../components/PageFooter"
-import PageNavBar from "../components/PageNavBar"
 import { graphql } from "gatsby"
 import AboutList from "../components/AboutList"
 import TeamCard from "../components/TeamCard"
 import Navbar from "../components/Navbar"
 
 const About = props => {
-  const aboutPage = props.data.allWordpressPage.edges[0].node.acf
-  const aboutPageHeading = aboutPage?.about_heading.page_heading
-  const metaTitle = aboutPage?.about_heading.meta_tag
-  const aboutPageSubHeading = aboutPage.about_heading.page_heading_content
+  const aboutPage = props?.data?.allWpPage?.edges[0]?.node?.aboutPage
+  const aboutPageHeading = aboutPage?.aboutHeading?.pageHeading
+  const metaTitle = aboutPage?.aboutHeading?.metaTag
+  const aboutPageSubHeading = aboutPage?.aboutHeading?.pageHeadingContent
   const aboutPageImage =
-    aboutPage?.about_heading?.page_heading_image?.localFile.publicURL
-  const aboutPageList = aboutPage.list_component
-  const aboutPageMainContentHeading = aboutPage.about_content.content_heading
-  const aboutPageMainContentSub = aboutPage.about_content.content_sub
-  const leftImages = aboutPage.left_images
-  const rightImages = aboutPage.right_images
-  const teamMembers = aboutPage.team_members
+    aboutPage?.aboutHeading?.pageHeadingImage?.localFile?.publicURL
+  const aboutPageList = aboutPage?.listComponent
+  const aboutPageMainContentHeading = aboutPage?.aboutContent?.contentHeading
+  const aboutPageMainContentSub = aboutPage?.aboutContent?.contentSub
+  const leftImages = aboutPage?.leftImages
+  const rightImages = aboutPage?.rightImages
+  const teamMembers = aboutPage?.teamMembers
 
   return (
     <div>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{metaTitle}</title>
-        <meta
+        {/* <meta
           name="description"
           content={
-            props.data.allWordpressPage.edges[0].node.yoast_json_ld[0]
-              .wordpress__graph[1].description
+            props.data?.allWpPage?.edges[0]?.node?.yoast_json_ld[0]
+              ?.wordpress__graph[1]?.description
           }
-        />
+        /> */}
       </Helmet>
       <Navbar bg={"#eaeaea"} />
       <div id="home-banner" className="company-bg"></div>
@@ -57,7 +55,7 @@ const About = props => {
                 />
               </div>
               <div className="col-12 offset-md-1 col-md-4">
-                {aboutPageList.map((list, key) => {
+                {aboutPageList?.map((list, key) => {
                   return <AboutList key={key} list={list} />
                 })}
               </div>
@@ -77,8 +75,8 @@ const About = props => {
                     return (
                       <img
                         key={key}
-                        src={image.image_file.localFile.publicURL}
-                        alt={image.image_file.localFile.name}
+                        src={image?.imageFile?.localFile?.publicURL}
+                        alt=""
                         className="img-fluid my-4 pl-md-5"
                       />
                     )
@@ -86,8 +84,8 @@ const About = props => {
                   return (
                     <img
                       key={key}
-                      src={image?.image_file?.localFile?.publicURL}
-                      alt={image?.image_file?.localFile?.name}
+                      src={image?.imageFile?.localFile?.publicURL}
+                      alt=""
                       className="img-fluid my-4"
                     />
                   )
@@ -98,8 +96,8 @@ const About = props => {
                   return (
                     <img
                       key={key}
-                      src={image.image_file.localFile.publicURL}
-                      alt={image.image_file.localFile.name}
+                      src={image?.imageFile?.localFile?.publicURL}
+                      alt=""
                       className="img-fluid my-4"
                     />
                   )
@@ -141,23 +139,18 @@ export default About
 
 export const aboutQuery = graphql`
   query aboutQuery {
-    allWordpressPage(filter: { slug: { in: "about" } }) {
+    allWpPage(filter: { slug: { in: "about" } }) {
       edges {
         node {
           id
-          yoast_json_ld {
-            wordpress__graph {
-              name
-              url
-              description
-            }
-          }
-          acf {
-            team_members {
+          aboutPage {
+            teamMembers {
               name
               title
+              fieldGroupName
               image {
                 localFile {
+                  publicURL
                   childImageSharp {
                     fixed(quality: 90) {
                       src
@@ -166,37 +159,40 @@ export const aboutQuery = graphql`
                 }
               }
             }
-            right_images {
-              image_file {
+            rightImages {
+              fieldGroupName
+              imageFile {
                 localFile {
                   publicURL
                   name
                 }
               }
             }
-            left_images {
-              image_file {
-                localFile {
-                  publicURL
-                  name
-                }
-              }
-            }
-            about_content {
-              content_heading
-              content_sub
-            }
-            list_component {
-              number
-              sub_heading
+            listComponent {
+              colorOption
+              fieldGroupName
               heading
-              color_option
+              number
+              subHeading
             }
-            about_heading {
-              page_heading
-              page_heading_content
-              meta_tag
-              page_heading_image {
+            leftImages {
+              fieldGroupName
+              imageFile {
+                localFile {
+                  publicURL
+                  name
+                }
+              }
+            }
+            aboutContent {
+              contentHeading
+              contentSub
+            }
+            aboutHeading {
+              metaTag
+              pageHeading
+              pageHeadingContent
+              pageHeadingImage {
                 localFile {
                   publicURL
                 }

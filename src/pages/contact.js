@@ -2,10 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
 
-import MobileHeader from "../components/MobileHeader"
 import PageFooter from "../components/PageFooter"
-import PageNavBar from "../components/PageNavBar"
-import { Img } from "gatsby-image"
 
 import styled from "styled-components"
 import JobCard from "../components/JobCard"
@@ -22,40 +19,46 @@ const Heading = styled.h1`
 
 const Contact = props => {
   const { data } = props
-  const contactPage = data.allWordpressPage.nodes[0]
+  const contactPage = data?.allWpPage?.nodes[0]
   const contactLeftImage =
-    contactPage.acf.contact_image.left_image.localFile.publicURL
+    contactPage?.contactPage?.contactImage?.leftImage?.localFile?.publicURL
   const contactRightImage =
-    contactPage.acf.contact_image.right_image.localFile.publicURL
-  const contactHeading = contactPage.acf.contact_heading.contact_heading
-  const metaTag = contactPage.acf.contact_heading.meta_tag
+    contactPage?.contactPage?.contactImage?.rightImage?.localFile?.publicURL
+  const contactHeading =
+    contactPage?.contactPage?.contactHeading?.contactHeading
+  const metaTag = contactPage?.contactPage?.contactHeading?.metaTag
   const contactHeadingImage =
-    contactPage.acf.contact_heading.contact_heading_image.localFile.publicURL
-  const contactSubHeading = contactPage.acf.contact_details.heading
+    contactPage?.contactPage?.contactHeading?.contactHeadingImage?.localFile
+      ?.publicURL
+  const contactSubHeading = contactPage?.contactPage?.contactDetails?.heading
   const contactLocationIcon =
-    contactPage.acf.contact_details.location.location_icon.localFile.publicURL
+    contactPage?.contactPage?.contactDetails?.location?.locationIcon?.localFile
+      ?.publicURL
   const contactTelephoneIcon =
-    contactPage.acf.contact_details.telephone.telephone_icon.localFile.publicURL
+    contactPage?.contactPage?.contactDetails?.telephone?.telephoneIcon
+      ?.localFile?.publicURL
   const contactEmailIcon =
-    contactPage.acf.contact_details.email.email_icon.localFile.publicURL
-  const contactEmailText = contactPage.acf.contact_details.email.email_text
+    contactPage?.contactPage?.contactDetails?.email?.emailIcon?.localFile
+      ?.publicURL
+  const contactEmailText =
+    contactPage?.contactPage?.contactDetails?.email?.emailText
   const contactLocationText =
-    contactPage.acf.contact_details.location.location_text
+    contactPage?.contactPage?.contactDetails?.location?.locationText
   const contactTelephoneText =
-    contactPage.acf.contact_details.telephone.telephone_text
+    contactPage?.contactPage?.contactDetails?.telephone?.telephoneText
 
   return (
     <div>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{metaTag}</title>
-        <meta
+        {/* <meta
           name="description"
           content={
-            props.data.allWordpressPage.nodes[0].yoast_json_ld[0]
-              .wordpress__graph[1].description
+            props?.data?.allWpPage?.nodes[0]?.yoast_json_ld[0]
+              ?.wordpress__graph[1]?.description
           }
-        />
+        /> */}
       </Helmet>
       <Navbar bg="#eaeaea" />
       <div id="home-banner" className="contact-bg">
@@ -108,6 +111,7 @@ const Contact = props => {
               <div
                 className="text-dark"
                 dangerouslySetInnerHTML={{ __html: contactEmailText }}
+                alt=""
               />
             </div>
 
@@ -149,13 +153,13 @@ const Contact = props => {
                   </p>
                 </div>
                 <div className="job-wrapper">
-                  {data.allWordpressWpJob.nodes.map(job => {
+                  {data?.allWpJob?.nodes?.map(job => {
                     return (
-                      <Link to={`/jobs/${job.slug}`}>
+                      <Link to={`/jobs/${job?.slug}`}>
                         <JobCard
-                          title={job.title}
-                          jobType={job.acf.job_type}
-                          key={job.id}
+                          title={job?.title}
+                          jobType={job?.jobs?.jobType}
+                          key={job?.id}
                         />
                       </Link>
                     )
@@ -175,70 +179,63 @@ export default Contact
 
 export const contactQuery = graphql`
   query MyQuery {
-    allWordpressWpJob {
+    allWpJob {
       nodes {
-        acf {
-          job_type
+        jobs {
+          jobType
         }
-
-        id
         title
         slug
+        id
       }
     }
-    allWordpressPage(filter: { slug: { in: "contact" } }) {
+    allWpPage(filter: { slug: { in: "contact" } }) {
       nodes {
-        yoast_json_ld {
-          wordpress__graph {
-            name
-            url
-            description
-          }
-        }
-        acf {
-          contact_heading {
-            contact_heading
-            meta_tag
-            contact_heading_image {
-              localFile {
-                publicURL
-              }
-            }
-          }
-          contact_details {
-            heading
+        id
+        contactPage {
+          contactDetails {
             email {
-              email_text
-              email_icon {
+              emailText
+              emailIcon {
                 localFile {
                   publicURL
                 }
               }
             }
+            heading
             location {
-              location_text
-              location_icon {
+              locationText
+              locationIcon {
                 localFile {
                   publicURL
                 }
               }
             }
             telephone {
-              telephone_text
-              telephone_icon {
+              telephoneText
+              telephoneIcon {
                 localFile {
                   publicURL
                 }
               }
             }
           }
-          contact_image {
-            left_image {
+          contactHeading {
+            contactHeading
+            metaTag
+            contactHeadingImage {
               localFile {
                 publicURL
               }
             }
-            right_image {
+          }
+          contactImage {
+            leftImage {
+              localFile {
+                publicURL
+              }
+            }
+            rightImage {
               localFile {
                 publicURL
               }

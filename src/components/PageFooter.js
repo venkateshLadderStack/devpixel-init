@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql, StaticQuery } from "gatsby"
 import BackToTopItem from "./BackTopTop"
 
-const PageFooter = props => {
+const PageFooter = () => {
   const date = new Date()
   return (
     <React.Fragment>
@@ -14,13 +14,15 @@ const PageFooter = props => {
                 <StaticQuery
                   query={graphql`
                     query FooterLogo {
-                      allWordpressAcfOptions {
+                      allWp {
                         nodes {
-                          options {
-                            footer_logo {
-                              localFile {
-                                name
-                                publicURL
+                          acfOptionsOptionsPage {
+                            optionsPage {
+                              footerLogo {
+                                localFile {
+                                  name
+                                  publicURL
+                                }
                               }
                             }
                           }
@@ -31,8 +33,8 @@ const PageFooter = props => {
                   render={data => (
                     <img
                       src={
-                        data.allWordpressAcfOptions.nodes[0].options.footer_logo
-                          .localFile.publicURL
+                        data?.allWp?.nodes[0]?.acfOptionsOptionsPage
+                          ?.optionsPage?.footerLogo?.localFile?.publicURL
                       }
                       alt="dev pixel"
                       width="60"

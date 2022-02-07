@@ -1,8 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import MobileHeader from "../components/MobileHeader"
 import PageFooter from "../components/PageFooter"
-import PageNavBar from "../components/PageNavBar"
 import SalesForcePageBox from "../components/SalesForcePageBox"
 import { graphql } from "gatsby"
 
@@ -21,25 +19,25 @@ const Heading = styled.h2`
 const Salesforce = props => {
   const isSalesforce = props.path === "/salesforce/" ? true : false
   const { data } = props
-  const salesforceContent = data.allWordpressPage.nodes[0].acf
-  const salesforcePageHeading = salesforceContent.page_heading.heading
-  const metatitle = salesforceContent.page_heading.meta_tag
-  const salesforcePageImage = salesforceContent.page_heading.image.localFile
-  const salesforceMainContentHeading = salesforceContent.main_content.heading
+  const salesforceContent = data?.allWpPage?.nodes[0]?.salesforcePageOptions
+  const salesforcePageHeading = salesforceContent?.pageHeading?.heading
+  const metatitle = salesforceContent?.pageHeading?.meta_tag
+  const salesforcePageImage = salesforceContent?.pageHeading?.image?.localFile
+  const salesforceMainContentHeading = salesforceContent?.mainContent?.heading
   const salesforceMainContentBoxes =
-    salesforceContent.main_content.salesforce_color_box
+    salesforceContent?.mainContent?.salesforceColorBox
   return (
     <>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{metatitle}</title>
-        <meta
+        {/* <meta
           name="description"
           content={
-            props.data.allWordpressPage.nodes[0].yoast_json_ld[0]
-              .wordpress__graph[1].description
+            props?.data?.allWpPage?.nodes[0]?.yoast_json_ld[0]
+              ?.wordpress__graph[1]?.description
           }
-        />
+        /> */}
       </Helmet>
       <Navbar bg="#c7dff0" home={false} />
       <div id="home-banner" className="salesforce-bg"></div>
@@ -52,8 +50,8 @@ const Salesforce = props => {
               </div>
               <div className="col-12 col-md-6  text-center">
                 <img
-                  src={salesforcePageImage.publicURL}
-                  alt={salesforcePageImage.name}
+                  src={salesforcePageImage?.publicURL}
+                  alt=""
                   className="img-fluid manux3"
                 />
               </div>
@@ -120,39 +118,35 @@ export default Salesforce
 
 export const salesForceQuery = graphql`
   query salesforceQuery {
-    allWordpressPage(filter: { slug: { in: "salesforce" } }) {
+    allWpPage(filter: { slug: { in: "salesforce" } }) {
       nodes {
-        yoast_json_ld {
-          wordpress__graph {
-            name
-            url
-            description
-          }
-        }
-        acf {
-          main_content {
+        id
+        salesforcePageOptions {
+          mainContent {
             heading
-            salesforce_color_box {
+            salesforceColorBox {
+              colorOptions
+              fieldGroupName
               heading
-              sub_content
-              color_options
+              subContent
               icon {
+                sourceUrl
                 localFile {
                   publicURL
-                  name
                 }
               }
             }
           }
-          page_heading {
+          pageHeading {
+            fieldGroupName
+            heading
+            metaTag
             image {
+              sourceUrl
               localFile {
                 publicURL
-                name
               }
             }
-            heading
-            meta_tag
           }
         }
       }

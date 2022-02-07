@@ -1,6 +1,5 @@
 import { Link } from "gatsby"
 import React from "react"
-import B1 from "../../assets/img/b1.svg"
 
 const Clients = ({ clients }) => {
   return (
@@ -14,8 +13,8 @@ const Clients = ({ clients }) => {
             data-aos-delay={`${5 * i}0`}
             data-aos-duration={`1${i}00`}
           >
-            <Link to={item?.client_image?.redirect_url}>
-              <img src={item?.client_image?.localFile?.publicURL} alt="" />
+            <Link to={item?.clientImage?.redirect_url}>
+              <img src={item?.clientImage?.localFile?.publicURL} alt="" />
             </Link>
           </div>
         ))}

@@ -1,7 +1,6 @@
 import React, { useRef } from "react"
 import Slider from "react-slick"
 import styled from "styled-components"
-import User from "../../assets/img/p.png"
 import PrevImg from "../../assets/img/arow-left.svg"
 import NextImg from "../../assets/img/arrow-ri.svg"
 
@@ -42,7 +41,7 @@ const Testimonials = ({ data }) => {
                 </Avatar>
                 <div className="safe__hand__ct">
                   <p>{item?.quote}</p>
-                  <span>{item?.author_detail}</span>
+                  <span>{item?.authorDetail}</span>
                 </div>
               </Card>
             </Single>

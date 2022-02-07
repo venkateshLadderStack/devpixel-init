@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import Bars from "../assets/img/bar.svg"
-import useWindowSize from "../../hooks/useWindowSize"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 
@@ -9,17 +8,14 @@ const Newheader = ({ bg, home }) => {
 
   const data = useStaticQuery(graphql`
     {
-      allWordpressAcfOptions {
+      allWp {
         nodes {
-          options {
-            header {
-              localFile {
-                name
-                publicURL
-                childImageSharp {
-                  fluid {
-                    src
-                  }
+          acfOptionsOptionsPage {
+            optionsPage {
+              header {
+                localFile {
+                  name
+                  publicURL
                 }
               }
             }
@@ -119,8 +115,8 @@ const Newheader = ({ bg, home }) => {
                       <Link to="/">
                         <img
                           src={
-                            data.allWordpressAcfOptions.nodes[0].options.header
-                              .localFile.publicURL
+                            data?.allWp?.nodes[0]?.acfOptionsOptionsPage
+                              ?.optionsPage?.header?.localFile?.publicURL
                           }
                           alt=""
                           className="logo_style"

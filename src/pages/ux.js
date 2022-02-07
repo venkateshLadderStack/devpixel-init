@@ -6,9 +6,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-import MobileHeader from "../components/MobileHeader"
 import PageFooter from "../components/PageFooter"
-import PageNavBar from "../components/PageNavBar"
 import { graphql } from "gatsby"
 import PrevArrow from "../images/prev.svg"
 import NextArrow from "../images/next.svg"
@@ -26,28 +24,28 @@ const Heading = styled.h2`
 `
 
 const UX = props => {
-  const uxPageContent = props.data.allWordpressPage.nodes[0].acf
-  const uxPageHeading = uxPageContent.ux_page_heading.heading
-  const metaTitle = uxPageContent.ux_page_heading.meta_tag
-  const uxPageHeadingImage = uxPageContent.ux_page_heading.image.localFile
-  const uxPageSubHeading = uxPageContent.ux_page_heading.sub_content
-  const verticalSLiderHeading = uxPageContent.ux_page_vertical_slider.heading
+  const uxPageContent = props?.data?.allWpPage?.nodes[0]?.uxPageOptions
+  const uxPageHeading = uxPageContent?.uxPageHeading?.heading
+  const metaTitle = uxPageContent?.uxPageHeading?.metaTag
+  const uxPageHeadingImage = uxPageContent?.uxPageHeading?.image?.localFile
+  const uxPageSubHeading = uxPageContent?.uxPageHeading?.sub_content
+  const verticalSLiderHeading = uxPageContent?.uxPageVerticalSlider?.heading
   const firstVerticalSliderHeader =
-    uxPageContent.ux_page_vertical_slider.first_slide.heading
+    uxPageContent?.uxPageVerticalSlider?.firstSlide?.heading
   const firstVerticalSliderImage =
-    uxPageContent.ux_page_vertical_slider.first_slide.image.localFile
+    uxPageContent?.uxPageVerticalSlider?.firstSlide?.image?.localFile
   const secondtVerticalSliderHeader =
-    uxPageContent.ux_page_vertical_slider.second_slide.heading
+    uxPageContent?.uxPageVerticalSlider?.secondSlide?.heading
   const secondVerticalSliderImage =
-    uxPageContent.ux_page_vertical_slider.second_slide.image.localFile
+    uxPageContent?.uxPageVerticalSlider?.secondSlide?.image?.localFile
   const thirdVerticalSliderHeader =
-    uxPageContent.ux_page_vertical_slider.third_slide.heading
+    uxPageContent?.uxPageVerticalSlider?.thirdSlide?.heading
   const thirdVerticalSliderImage =
-    uxPageContent.ux_page_vertical_slider.third_slide.image.localFile
+    uxPageContent?.uxPageVerticalSlider?.thirdSlide?.image?.localFile
   const imageBelowVerticalSlider =
-    uxPageContent.ux_image_below_vertical_slider.localFile
-  const mainSliderHeading = uxPageContent.ux_main_slider.heading
-  const mainSliderImages = uxPageContent.ux_main_slider.slides
+    uxPageContent?.uxImageBelowVerticalSlider?.localFile
+  const mainSliderHeading = uxPageContent?.uxMainSlider?.heading
+  const mainSliderImages = uxPageContent?.uxMainSlider?.slides
 
   useEffect(() => {
     const changeDot = () => {
@@ -76,12 +74,16 @@ const UX = props => {
 
   function SampleNextArrow(props) {
     const { className, style, onClick } = props
-    return <img className={className} src={NextArrow} onClick={onClick} />
+    return (
+      <img className={className} src={NextArrow} onClick={onClick} alt="" />
+    )
   }
 
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props
-    return <img className={className} src={PrevArrow} onClick={onClick} />
+    return (
+      <img className={className} src={PrevArrow} onClick={onClick} alt="" />
+    )
   }
 
   const settings = {
@@ -101,13 +103,13 @@ const UX = props => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>{metaTitle}</title>
-        <meta
+        {/* <meta
           name="description"
           content={
-            props.data.allWordpressPage.nodes[0].yoast_json_ld[0]
-              .wordpress__graph[1].description
+            props?.data?.allWpPage?.nodes[0]?.yoast_json_ld[0]
+              ?.wordpress__graph[1]?.description
           }
-        />
+        /> */}
       </Helmet>
       <Newheader />
       <div id="home-banner" className="ux-head"></div>
@@ -122,13 +124,13 @@ const UX = props => {
               </div>
               <div className="col-12 col-md-6  text-center">
                 <img
-                  src={uxPageHeadingImage.publicURL}
-                  alt={uxPageHeadingImage.name}
+                  src={uxPageHeadingImage?.publicURL}
+                  alt=""
                   className="img-fluid manux3"
                 />
                 <img
-                  src={uxPageHeadingImage.publicURL}
-                  alt={uxPageHeadingImage.name}
+                  src={uxPageHeadingImage?.publicURL}
+                  alt=""
                   className="img-fluid manux8"
                 />
               </div>
@@ -164,24 +166,24 @@ const UX = props => {
                     <h5>{firstVerticalSliderHeader}</h5>
 
                     <img
-                      src={firstVerticalSliderImage.publicURL}
-                      alt={firstVerticalSliderImage.name}
+                      src={firstVerticalSliderImage?.publicURL}
+                      alt=""
                       className="img-fluid"
                     />
                   </div>
                   <div className="uxsec2 set" id="uxtwo">
                     <h5>{secondtVerticalSliderHeader}</h5>
                     <img
-                      src={secondVerticalSliderImage.publicURL}
-                      alt={secondVerticalSliderImage.name}
+                      src={secondVerticalSliderImage?.publicURL}
+                      alt=""
                       className="img-fluid"
                     />
                   </div>
                   <div className="uxsec3 set" id="uxthree">
                     <h5>{thirdVerticalSliderHeader}</h5>
                     <img
-                      src={thirdVerticalSliderImage.publicURL}
-                      alt={thirdVerticalSliderImage.name}
+                      src={thirdVerticalSliderImage?.publicURL}
+                      alt=""
                       className="img-fluid"
                     />
                   </div>
@@ -197,8 +199,8 @@ const UX = props => {
             <div className="col-12 col-md-12  text-center">
               <div className="col-12 col-md-12  text-center">
                 <img
-                  src={imageBelowVerticalSlider.publicURL}
-                  alt={imageBelowVerticalSlider.name}
+                  src={imageBelowVerticalSlider?.publicURL}
+                  alt=""
                   className="img-fluid manux1"
                 />
               </div>
@@ -213,12 +215,12 @@ const UX = props => {
               <Heading className="">{mainSliderHeading}</Heading>
               <div className="container">
                 <Slider {...settings}>
-                  {mainSliderImages.map((slide, key) => {
+                  {mainSliderImages?.map((slide, key) => {
                     return (
                       <div key={key}>
                         <img
-                          src={slide.file.localFile.publicURL}
-                          alt={slide.file.localFile.name}
+                          src={slide?.file?.localFile?.publicURL}
+                          alt=""
                           className="img-fluid"
                         />
                       </div>
@@ -239,17 +241,17 @@ export default UX
 
 export const uxQuery = graphql`
   query UxQuery {
-    allWordpressPage(filter: { slug: { in: "ux" } }) {
+    allWpPage(filter: { slug: { in: "ux" } }) {
       nodes {
-        yoast_json_ld {
-          wordpress__graph {
-            name
-            url
-            description
+        id
+        uxPageOptions {
+          uxImageBelowVerticalSlider {
+            localFile {
+              name
+              publicURL
+            }
           }
-        }
-        acf {
-          ux_main_slider {
+          uxMainSlider {
             heading
             slides {
               file {
@@ -260,50 +262,44 @@ export const uxQuery = graphql`
               }
             }
           }
-          ux_image_below_vertical_slider {
-            localFile {
-              name
-              publicURL
-            }
-          }
-          ux_page_vertical_slider {
+          uxPageHeading {
             heading
-            third_slide {
-              heading
-              image {
-                localFile {
-                  name
-                  publicURL
-                }
-              }
-            }
-            second_slide {
-              heading
-              image {
-                localFile {
-                  name
-                  publicURL
-                }
-              }
-            }
-            first_slide {
-              heading
-              image {
-                localFile {
-                  name
-                  publicURL
-                }
-              }
-            }
-          }
-          ux_page_heading {
-            heading
-            sub_content
-            meta_tag
+            metaTag
+            subContent
             image {
               localFile {
                 name
                 publicURL
+              }
+            }
+          }
+          uxPageVerticalSlider {
+            heading
+            firstSlide {
+              heading
+              image {
+                localFile {
+                  name
+                  publicURL
+                }
+              }
+            }
+            secondSlide {
+              heading
+              image {
+                localFile {
+                  name
+                  publicURL
+                }
+              }
+            }
+            thirdSlide {
+              heading
+              image {
+                localFile {
+                  name
+                  publicURL
+                }
               }
             }
           }

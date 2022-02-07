@@ -12,16 +12,18 @@ const TestimonialBox = props => {
   return (
     <div className="testmv testmv2">
       <blockquote>
-        <p className="quotation">{props.testimonial.quote}</p>
+        <p className="quotation">{props?.testimonial?.quote}</p>
       </blockquote>
       <div className="photot">
         <img
-          src={props.testimonial.image.localFile.publicURL}
-          alt={props.testimonial.image.localFile.name}
+          src={props?.testimonial?.image?.localFile?.publicURL}
+          alt={props?.testimonial?.image?.localFile?.name}
           className="img-fluid"
         />
         <AuthorWrapper
-          dangerouslySetInnerHTML={{ __html: props.testimonial.author_detail }}
+          dangerouslySetInnerHTML={{
+            __html: props?.testimonial?.authorDetail,
+          }}
         />
       </div>
     </div>

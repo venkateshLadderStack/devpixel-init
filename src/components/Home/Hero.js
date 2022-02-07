@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import useWindowSize from "../../../hooks/useWindowSize"
-import Logo from "../../assets/img/banner-main.jpg"
 
 const Hero = ({ acf }) => {
   const { width } = useWindowSize()
@@ -13,9 +12,9 @@ const Hero = ({ acf }) => {
         style={{
           backgroundImage: `url(${
             (width > 768 &&
-              acf?.hero?.background_image_main?.localFile?.publicURL) ||
+              acf?.hero?.backgroundImageMain?.localFile?.publicURL) ||
             (width < 768 &&
-              acf?.hero?.mobile_background_image?.localFile?.publicURL)
+              acf?.hero?.mobileBackgroundImage?.localFile?.publicURL)
           })`,
         }}
       >

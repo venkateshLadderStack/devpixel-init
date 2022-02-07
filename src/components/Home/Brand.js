@@ -7,7 +7,7 @@ const Brand = ({ acf }) => {
     <>
       <div className="brand__aera">
         <img
-          src={acf?.hero?.background_image_2?.localFile?.publicURL}
+          src={acf?.hero?.backgroundImage2?.localFile?.publicURL}
           alt=""
           className="hero-bg-b"
         />
@@ -22,7 +22,7 @@ const Brand = ({ acf }) => {
                 <div className="safe__hand">
                   <div className="safe__hand__title">
                     <h4>
-                      {acf?.testimonials?.sub_heading}{" "}
+                      {acf?.testimonials?.subHeading}{" "}
                       <span>{acf?.testimonials?.heading}</span>
                     </h4>
                   </div>
