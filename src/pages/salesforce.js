@@ -70,13 +70,13 @@ const Salesforce = props => {
           <div className="row mt-2">
             <SalesForcePageBox
               content={
-                salesforceMainContentBoxes.length > 0 &&
+                salesforceMainContentBoxes?.length > 0 &&
                 salesforceMainContentBoxes[0]
               }
             />
             <SalesForcePageBox
               content={
-                salesforceMainContentBoxes.length > 0 &&
+                salesforceMainContentBoxes?.length > 0 &&
                 salesforceMainContentBoxes[1]
               }
             />
@@ -84,13 +84,13 @@ const Salesforce = props => {
           <div className="row mt-2">
             <SalesForcePageBox
               content={
-                salesforceMainContentBoxes.length > 0 &&
+                salesforceMainContentBoxes?.length > 0 &&
                 salesforceMainContentBoxes[2]
               }
             />
             <SalesForcePageBox
               content={
-                salesforceMainContentBoxes.length > 0 &&
+                salesforceMainContentBoxes?.length > 0 &&
                 salesforceMainContentBoxes[3]
               }
             />
