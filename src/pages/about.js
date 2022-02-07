@@ -70,7 +70,7 @@ const About = props => {
                   {aboutPageMainContentHeading}
                 </h1>
                 <p className="para18 pl-md-5">{aboutPageMainContentSub}</p>
-                {leftImages.map((image, key) => {
+                {leftImages?.map((image, key) => {
                   if (key % 2 === 0) {
                     return (
                       <img
@@ -92,7 +92,7 @@ const About = props => {
                 })}
               </div>
               <div className="col-12 col-md-6 pl-md-5">
-                {rightImages.map((image, key) => {
+                {rightImages?.map((image, key) => {
                   return (
                     <img
                       key={key}
@@ -117,7 +117,7 @@ const About = props => {
             </div>
           </div>
           <div className="row">
-            {teamMembers.map((member, key) => {
+            {teamMembers?.map((member, key) => {
               return (
                 <TeamCard
                   title={member?.title}
