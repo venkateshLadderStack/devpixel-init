@@ -1,20 +1,18 @@
 import React from "react"
 
-const SalesForcePageBox = props => {
+const SalesForcePageBox = ({ content }) => {
   return (
     <div
-      className={`col-12 col-md rounded ${props?.content?.colorOptions} p-5 m-md-3 mb-4`}
+      className={`col-12 col-md rounded ${content?.colorOptions} p-5 m-md-3 mb-4`}
     >
       <img
-        src={props?.content?.icon?.localFile?.publicURL}
-        alt={props?.content?.icon?.localFile?.name}
+        src={content?.icon?.localFile?.publicURL}
+        alt={content?.icon?.localFile?.name}
         className="img-fluid "
       />
 
-      <h3 className="mt-3">{props?.content?.heading}</h3>
-      <div
-        dangerouslySetInnerHTML={{ __html: props?.content?.subContent }}
-      ></div>
+      <h3 className="mt-3">{content?.heading}</h3>
+      <div dangerouslySetInnerHTML={{ __html: content?.subContent }}></div>
     </div>
   )
 }
