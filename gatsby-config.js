@@ -23,7 +23,6 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    "gatsby-plugin-netlify-cache",
     "gatsby-plugin-sass",
     {
       resolve: `gatsby-source-filesystem`,

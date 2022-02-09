@@ -1,6 +1,5 @@
 const _ = require("lodash")
 const path = require("path")
-const { createFilePath } = require("gatsby-source-filesystem")
 
 const getOnlyPublished = edges =>
   _.filter(edges, ({ node }) => node.status === "publish")
