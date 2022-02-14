@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="76" height="76" viewBox="0 0 76 76">
+  <defs>
+    <clipPath id="clip-Custom_Size_1">
+      <rect width="76" height="76"/>
+    </clipPath>
+  </defs>
+  <g id="Custom_Size_1" data-name="Custom Size – 1" clip-path="url(#clip-Custom_Size_1)">
+    <g id="Group_775" data-name="Group 775" transform="translate(-887 -852)">
+      <circle id="Ellipse_29" data-name="Ellipse 29" cx="26" cy="26" r="26" transform="translate(907.109 857)" fill="#f6bb30"/>
+      <path id="Path_2012" data-name="Path 2012" d="M314.807,427.5c6.5,6.591,17.063,8.138,23.386,3.363l5.833-4.6c3.84-2.918,4.048-7.121,1.479-9.689l-7.2-7.2a6.623,6.623,0,0,0-9.339,0l-6.335,6.337-10.381-10.379-10.379-10.379,6.337-6.335a6.624,6.624,0,0,0,0-9.341l-7.2-7.2c-2.567-2.569-6.77-2.361-9.689,1.479l-4.6,5.833c-4.775,6.323-3.228,16.883,3.363,23.386Z" transform="translate(607.05 490.266)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

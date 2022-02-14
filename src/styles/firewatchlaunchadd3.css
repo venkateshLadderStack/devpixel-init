@@ -1,0 +1,71 @@
+/* MAGNIFIC OVERRIDE */
+
+.firewatch .mfp-image-holder .mfp-content {
+  max-width: 90%;
+}
+
+/* PARALLAX */
+
+#parallax {
+  display: none;
+}
+#nonparallax {
+  display: block;
+}
+
+.keyart {
+  position: relative;
+  z-index: 10;
+}
+
+.keyart_layer {
+  background-position: bottom center;
+  background-size: auto 1038px;
+  background-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
+}
+.keyart_layer.parallax {
+  position: fixed;
+}
+
+#keyart-scrim {
+  background-color: #d6e9f5;
+  opacity: 0;
+}
+
+/********************/
+/********************/
+/* ENABLES PARALLAX */
+/********************/
+/********************/
+
+@media (min-width: 601px) {
+  #nonparallax {
+    display: none;
+  }
+  #parallax {
+    display: block;
+    background: #d6e9f5;
+  }
+}
+
+/*********************/
+/*********************/
+/* DISABLES PARALLAX */
+/*********************/
+/*********************/
+
+@media only screen and (max-device-width: 450px) {
+  /* PARALLAX */
+
+  .keyart,
+  .keyart_layer {
+    height: 416px;
+  }
+
+  .keyart_layer {
+    position: absolute;
+    background-size: auto 600px;
+  }
+}

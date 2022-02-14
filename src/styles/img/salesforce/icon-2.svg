@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75" height="75" viewBox="0 0 75 75">
+  <defs>
+    <clipPath id="clip-Custom_Size_1">
+      <rect width="75" height="75"/>
+    </clipPath>
+  </defs>
+  <g id="Custom_Size_1" data-name="Custom Size – 1" clip-path="url(#clip-Custom_Size_1)">
+    <g id="Group_2149" data-name="Group 2149" transform="translate(-1019 -2356)">
+      <circle id="Ellipse_124" data-name="Ellipse 124" cx="37.5" cy="37.5" r="37.5" transform="translate(1019 2356)" fill="#81b5a8"/>
+      <g id="Icon_ionic-md-chatboxes" data-name="Icon ionic-md-chatboxes" transform="translate(1037.375 2376.5)">
+        <path id="Path_8337" data-name="Path 8337" d="M27.531,4.5H4.05a.677.677,0,0,0-.675.574V20.136a.705.705,0,0,0,.675.606H8.086v6.25l6.337-6.25H27.531a.568.568,0,0,0,.524-.606V5.074A.538.538,0,0,0,27.531,4.5Z" fill="#50726a"/>
+        <path id="Path_8338" data-name="Path 8338" d="M32.09,8.93H29.813V20.642c0,1.124-.486,1.858-1.768,1.858H15.335L12.6,25.242h9.119L28.055,31.5V25.242H32.09a.58.58,0,0,0,.535-.61V9.57A.608.608,0,0,0,32.09,8.93Z" fill="#50726a"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="440" height="320" viewBox="0 0 440 320">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_714" data-name="Rectangle 714" width="440" height="320"/>
+    </clipPath>
+  </defs>
+  <g id="Custom_Size_1" data-name="Custom Size – 1" clip-path="url(#clip-path)">
+    <g id="top_-circles" data-name="top -circles" transform="translate(-783 -3981.785)">
+      <path id="Path_8050" data-name="Path 8050" d="M8777.757,990.415s3.235-9.207,5.588-13.56c.394-.584,7.669-9.786,7.669-9.786s8,10.936,9.571,15.03c1.686,4.377,3.854,9.59,3.854,9.59a69.978,69.978,0,0,1-13.426,1.1,40.2,40.2,0,0,1-13.256-2.374Z" transform="translate(-7789.297 3212.202)" fill="#f5c113"/>
+      <text id="Valuable" transform="translate(980.748 4123.58)" fill="#fff" font-size="14" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Valuable</tspan></text>
+      <text id="Usable" transform="translate(913.648 4238)" fill="#fff" font-size="14" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Usable</tspan></text>
+      <text id="Feasible" transform="translate(1046.03 4238)" fill="#fff" font-size="14" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Feasible</tspan></text>
+      <text id="Development_Perspective" data-name="Development Perspective" transform="translate(1143.316 4224)" fill="#dce3e6" font-size="14" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Development</tspan><tspan x="0" y="19">Perspective</tspan></text>
+      <text id="Design_perspective" data-name="Design  perspective" transform="translate(784 4220)" fill="#dce3e6" font-size="14" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Design </tspan><tspan x="0" y="16">perspective</tspan></text>
+      <g id="Group_2177" data-name="Group 2177">
+        <text id="Business_" data-name="Business " transform="translate(978.854 4024.571)" fill="#dce3e6" font-size="14" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">Business </tspan></text>
+        <text id="perspective" transform="translate(972.029 4041.571)" fill="#dce3e6" font-size="14" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">perspective</tspan></text>
+      </g>
+      <g id="Component_143_1" data-name="Component 143 – 1" transform="translate(869.202 4055.234)">
+        <g id="Ellipse_108" data-name="Ellipse 108" transform="translate(62.053)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="75" cy="75" r="75" stroke="none"/>
+          <circle cx="75" cy="75" r="74.5" fill="none"/>
+        </g>
+        <g id="Ellipse_130" data-name="Ellipse 130" transform="translate(0 96.41)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="75" cy="75" r="75" stroke="none"/>
+          <circle cx="75" cy="75" r="74.5" fill="none"/>
+        </g>
+        <g id="Ellipse_131" data-name="Ellipse 131" transform="translate(114.726 96.41)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="75" cy="75" r="75" stroke="none"/>
+          <circle cx="75" cy="75" r="74.5" fill="none"/>
+        </g>
+      </g>
+      <text id="COLLABORATIVE_SOLUTION" data-name="COLLABORATIVE SOLUTION" transform="translate(925 3995.785)" fill="#fff" font-size="14" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="0" y="0">COLLABORATIVE SOLUTION</tspan></text>
+    </g>
+  </g>
+</svg>

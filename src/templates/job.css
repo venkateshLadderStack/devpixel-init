@@ -1,0 +1,85 @@
+.header-area {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid #ededed;
+}
+.sale-area {
+  padding-top: 15px;
+  padding-bottom: 50px;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-title h3 {
+  font-size: 30px;
+  color: #222222;
+  margin: 0;
+  font-weight: 400;
+}
+.section-title span {
+  color: #263d51;
+  font-size: 20px;
+  font-weight: 400;
+}
+.singel-sale h3 {
+  font-size: 20px;
+  color: #263d51;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.singel-sale p {
+  font-size: 18px;
+  color: #546676;
+  line-height: 22px;
+}
+.singel-sale {
+  margin-bottom: 30px;
+}
+.sale-last-text {
+  border-top: 1px solid #ebebeb;
+  text-align: center;
+  padding: 20px 0;
+  padding-bottom: 0;
+}
+.sale-last-text p {
+  font-size: 20px;
+  color: #263d51;
+
+  font-weight: 400;
+  margin: 0;
+}
+.sale-last-text p a {
+  font-weight: 700;
+  color: #263d51;
+}
+.footer-area {
+  background: #263d51;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.footer-logo {
+  margin-bottom: 25px;
+}
+.footer-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.footer-menu a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 8px;
+}
+.foote-copy p {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0;
+}

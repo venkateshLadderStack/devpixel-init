@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g id="Group_2208" data-name="Group 2208" transform="translate(-379 -2903)">
+    <g id="Ellipse_1202" data-name="Ellipse 1202" transform="translate(379 2903)" fill="#fff" stroke="#263d51" stroke-width="2">
+      <circle cx="24" cy="24" r="24" stroke="none"/>
+      <circle cx="24" cy="24" r="23" fill="none"/>
+    </g>
+    <path id="Icon_material-keyboard-arrow-left" data-name="Icon material-keyboard-arrow-left" d="M23.115,24.135l-6.87-6.885,6.87-6.885L21,8.25l-9,9,9,9Z" transform="translate(383.885 2909.75)"/>
+  </g>
+</svg>
